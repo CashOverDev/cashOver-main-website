@@ -1,0 +1,200 @@
+.terms-of-service-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.terms-of-service-navbar-interactive {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: var(--dl-space-space-twounits);
+  padding-left: var(--dl-space-space-threeunits);
+  padding-right: var(--dl-space-space-threeunits);
+  padding-bottom: var(--dl-space-space-twounits);
+  justify-content: space-between;
+}
+.terms-of-service-image {
+  width: auto;
+  height: 3rem;
+}
+.terms-of-service-desktop-menu {
+  flex: 1;
+  display: none;
+  justify-content: space-between;
+}
+.terms-of-service-burger-menu {
+  display: flex;
+}
+.terms-of-service-mobile-menu {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  padding: 32px;
+  z-index: 100;
+  position: absolute;
+  transform: translateY(-100%);
+  transition: 0.5s;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+}
+.terms-of-service-column {
+  flex: 1;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  padding-top: var(--dl-space-space-sixunits);
+  padding-left: 192px;
+  padding-right: 192px;
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-sixunits);
+  justify-content: flex-start;
+}
+.terms-of-service-text {
+  font-size: 22px;
+}
+.terms-of-service-text01 {
+  font-size: 48px;
+  font-style: normal;
+  margin-top: var(--dl-space-space-threeunits);
+  text-align: center;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.terms-of-service-column1 {
+  flex: 0 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.terms-of-service-text02 {
+  width: auto;
+  text-align: left;
+  line-height: 1.5;
+  padding-top: var(--dl-space-space-sixunits);
+  margin-right: var(--dl-space-space-threeunits);
+}
+.terms-of-service-text06 {
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+}
+.terms-of-service-text23 {
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+}
+.terms-of-service-text24 {
+  font-size: 28px;
+}
+.terms-of-service-text29 {
+  font-size: 28px;
+  font-weight: 700;
+}
+.terms-of-service-text30 {
+  font-size: 28px;
+}
+.terms-of-service-text35 {
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+}
+.terms-of-service-text36 {
+  font-size: 28px;
+}
+.terms-of-service-text41 {
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+}
+.terms-of-service-text42 {
+  font-size: 28px;
+}
+.terms-of-service-text47 {
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+}
+.terms-of-service-text48 {
+  font-size: 28px;
+}
+.terms-of-service-text53 {
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+}
+.terms-of-service-text54 {
+  font-size: 28px;
+  font-weight: bold;
+}
+.terms-of-service-text59 {
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+}
+.terms-of-service-text60 {
+  font-size: 28px;
+}
+.terms-of-service-text65 {
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+}
+.terms-of-service-text66 {
+  font-size: 28px;
+}
+.terms-of-service-text71 {
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+}
+.terms-of-service-text72 {
+  font-size: 28px;
+}
+.terms-of-service-text77 {
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+}
+.terms-of-service-text78 {
+  font-size: 28px;
+}
+.terms-of-service-text86 {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 800;
+}
+@media(max-width: 1920px) {
+  .terms-of-service-desktop-menu {
+    display: none;
+  }
+  .terms-of-service-burger-menu {
+    display: flex;
+  }
+}
+@media(max-width: 767px) {
+  .terms-of-service-navbar-interactive {
+    padding-left: var(--dl-space-space-twounits);
+    padding-right: var(--dl-space-space-twounits);
+  }
+  .terms-of-service-burger-menu {
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media(max-width: 479px) {
+  .terms-of-service-navbar-interactive {
+    padding: var(--dl-space-space-unit);
+  }
+  .terms-of-service-mobile-menu {
+    padding: 16px;
+  }
+}
