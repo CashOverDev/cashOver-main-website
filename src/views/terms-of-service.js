@@ -1,7 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import { Helmet } from 'react-helmet'
 
+import Footer from '../components/footer'
 import './terms-of-service.css'
 
 const TermsOfService = (props) => {
@@ -26,15 +28,14 @@ const TermsOfService = (props) => {
           content="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/8b3094c7-7cdb-40f6-a719-0ee8bc9f46ba/ccd6fb98-7341-44f7-9ed0-1111ae5917eb?org_if_sml=1&amp;force_format=original"
         />
       </Helmet>
-      <header
-        data-thq="thq-navbar"
-        className="terms-of-service-navbar-interactive"
-      >
-        <img
-          alt="logo"
-          src="/cashover%20banner%20light-1500h.png"
-          className="terms-of-service-image"
-        />
+      <header data-thq="thq-navbar" className="terms-of-service-navigation-bar">
+        <Link to="/" className="terms-of-service-navlink">
+          <img
+            alt="logo"
+            src="/cashover%20banner%20light.png"
+            className="terms-of-service-image"
+          />
+        </Link>
         <div
           data-thq="thq-navbar-nav"
           className="terms-of-service-desktop-menu"
@@ -234,6 +235,7 @@ const TermsOfService = (props) => {
           </span>
         </div>
       </div>
+      <Footer rootClassName="footer-root-class-name1"></Footer>
     </div>
   )
 }

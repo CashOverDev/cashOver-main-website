@@ -6,7 +6,7 @@
   align-items: center;
   flex-direction: column;
 }
-.terms-of-service-navbar-interactive {
+.terms-of-service-navigation-bar {
   flex: 1;
   width: 100%;
   display: flex;
@@ -17,9 +17,13 @@
   padding-bottom: var(--dl-space-space-twounits);
   justify-content: space-between;
 }
+.terms-of-service-navlink {
+  display: contents;
+}
 .terms-of-service-image {
   width: auto;
   height: 3rem;
+  text-decoration: none;
 }
 .terms-of-service-desktop-menu {
   flex: 1;
@@ -78,7 +82,7 @@
 .terms-of-service-text02 {
   width: auto;
   text-align: left;
-  line-height: 1.5;
+  line-height: 1.75;
   padding-top: var(--dl-space-space-sixunits);
   margin-right: var(--dl-space-space-threeunits);
 }
@@ -181,7 +185,7 @@
   }
 }
 @media(max-width: 767px) {
-  .terms-of-service-navbar-interactive {
+  .terms-of-service-navigation-bar {
     padding-left: var(--dl-space-space-twounits);
     padding-right: var(--dl-space-space-twounits);
   }
@@ -191,7 +195,7 @@
   }
 }
 @media(max-width: 479px) {
-  .terms-of-service-navbar-interactive {
+  .terms-of-service-navigation-bar {
     padding: var(--dl-space-space-unit);
   }
   .terms-of-service-mobile-menu {
