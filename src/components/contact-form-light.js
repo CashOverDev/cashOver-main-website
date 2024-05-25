@@ -7,6 +7,7 @@ import './contact-form-light.css'
 const ContactFormLight = (props) => {
   return (
     <main
+      id="contactForm"
       className={`contact-form-light-contact11 thq-section-padding ${props.rootClassName} `}
     >
       <div className="contact-form-light-max-width thq-section-max-width">
@@ -94,7 +95,6 @@ const ContactFormLight = (props) => {
               <input
                 type="checkbox"
                 id="contact-form-9-check"
-                checked="true"
                 required="true"
                 className="thq-checkbox"
               />
@@ -125,7 +125,12 @@ const ContactFormLight = (props) => {
                   <h3 className="contact-form-light-text08 thq-heading-3">
                     Email
                   </h3>
-                  <span className="thq-body-small">{props.email}</span>
+                  <a
+                    href="mailto:contactus@overlab.io?subject="
+                    className="contact-form-light-email thq-body-small"
+                  >
+                    {props.email}
+                  </a>
                 </div>
               </div>
               <div className="contact-form-light-content4">
@@ -142,7 +147,12 @@ const ContactFormLight = (props) => {
                   <h3 className="contact-form-light-text09 thq-heading-3">
                     Phone
                   </h3>
-                  <span className="thq-body-small">{props.phone}</span>
+                  <a
+                    href="tel:+96181350616"
+                    className="contact-form-light-phone thq-body-small"
+                  >
+                    {props.phone}
+                  </a>
                 </div>
               </div>
             </div>
@@ -183,16 +193,16 @@ const ContactFormLight = (props) => {
 
 ContactFormLight.defaultProps = {
   content2: 'Get in touch with us today!',
-  address: 'Lebanon, Tripoli, Boulevard Street',
+  address: 'Lebanon, Tripoli, Ashir Dayeh Street',
   imageAlt1: 'image',
   phone: '+961 81 350 616',
   content1: 'Our team will get back to you within 24 hrs',
   imageSrc: 'cbe1a1f7-849f-4747-a82a-71fc226cdd4e',
   heading1: 'REACH OUT TO US',
   imageAlt: 'image',
-  email: 'contactus@overlab.io',
+  email: 'support@cashover.money',
   rootClassName: '',
-  imageSrc1: '/cashover-200w.webp',
+  imageSrc1: '/cashover-200w.png',
   action: 'SUBMIT',
 }
 

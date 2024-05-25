@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import PropTypes from 'prop-types'
 
@@ -11,11 +12,13 @@ const ContactFormDark = (props) => {
     >
       <div className="contact-form-dark-max-width thq-flex-row thq-section-max-width">
         <div className="contact-form-dark-section-title thq-flex-column">
-          <img
-            alt={props.logoAlt}
-            src={props.logoSrc}
-            className="contact-form-dark-logo"
-          />
+          <Link to="/" className="">
+            <img
+              alt={props.logoAlt}
+              src={props.logoSrc}
+              className="contact-form-dark-logo"
+            />
+          </Link>
           <span className="contact-form-dark-text thq-body-small">
             {props.content2}
           </span>
@@ -82,10 +85,12 @@ const ContactFormDark = (props) => {
                 First name
               </label>
               <input
-                type="text"
-                id="contact-form-8-first-name"
+                type="name"
+                id="firstName"
+                name="firstName"
+                required="true"
                 placeholder="Enter your first name"
-                className="contact-form-dark-text-input thq-input"
+                className="contact-form-dark-text-input thq-input-dark"
               />
             </div>
             <div className="contact-form-dark-input1">
@@ -96,10 +101,12 @@ const ContactFormDark = (props) => {
                 Last name
               </label>
               <input
-                type="text"
-                id="contact-form-8-last-name"
+                type="name"
+                id="lastName"
+                name="lastName"
+                required="true"
                 placeholder="Enter your last name"
-                className="contact-form-dark-text-input1 thq-input"
+                className="contact-form-dark-text-input1 thq-input-dark"
               />
             </div>
           </div>
@@ -112,11 +119,12 @@ const ContactFormDark = (props) => {
                 Email
               </label>
               <input
-                type="text"
-                id="contact-form-8-email"
+                type="email"
+                id="email"
+                name="email"
                 required="true"
                 placeholder="Enter your email"
-                className="contact-form-dark-text-input2 thq-input"
+                className="contact-form-dark-text-input2 thq-input-dark"
               />
             </div>
             <div className="contact-form-dark-input3">
@@ -127,10 +135,12 @@ const ContactFormDark = (props) => {
                 Phone Number
               </label>
               <input
-                type="text"
-                id="contact-form-8-phone"
+                type="tel"
+                id="phone"
+                name="phone"
+                required="true"
                 placeholder="Enter your phone number"
-                className="contact-form-dark-text-input3 thq-input"
+                className="contact-form-dark-text-input3 thq-input-dark"
               />
             </div>
           </div>
@@ -143,45 +153,29 @@ const ContactFormDark = (props) => {
                 Choose one topic
               </label>
               <select
-                id="contact-form-8-options"
+                id="topic"
+                name="topic"
+                required="true"
                 placeholder="Select one"
-                className="thq-select-custom"
+                className="thq-select-dark"
               >
-                <option value="Option 1" className="">
-                  Option 1
+                <option value="Support" className="">
+                  Support
                 </option>
-                <option value="Option 1" className="">
-                  Customer service
+                <option value="ATMs" className="">
+                  ATMs
                 </option>
-                <option value="Option 1" className="">
-                  Option 1
+                <option value="Agent" className="">
+                  Agent
                 </option>
-                <option value="Option 1" className="">
-                  Option 1
+                <option value="Career" className="">
+                  Career
                 </option>
-                <option value="Option 2" className="">
-                  Finance
+                <option value="Merchant" className="">
+                  Merchant
                 </option>
-                <option value="Option 2" className="">
-                  Option 2
-                </option>
-                <option value="Option 2" className="">
-                  Option 2
-                </option>
-                <option value="Option 2" className="">
-                  Option 2
-                </option>
-                <option value="Option 3" className="">
-                  Option 3
-                </option>
-                <option value="Option 3" className="">
-                  Option 3
-                </option>
-                <option value="Option 3" className="">
-                  Feature request
-                </option>
-                <option value="Option 3" className="">
-                  Option 3
+                <option value="Business" className="">
+                  Business
                 </option>
               </select>
             </div>
@@ -195,10 +189,11 @@ const ContactFormDark = (props) => {
                 Message
               </label>
               <textarea
-                id="contact-form-8-message"
+                id="message"
+                name="message"
                 rows="3"
                 placeholder="Explain your request"
-                className="contact-form-dark-textarea thq-input"
+                className="contact-form-dark-textarea thq-input-dark"
               ></textarea>
             </div>
           </div>
@@ -206,7 +201,6 @@ const ContactFormDark = (props) => {
             <input
               type="checkbox"
               id="contact-form-8-check"
-              checked="true"
               required="true"
               className="thq-checkbox"
             />
@@ -218,8 +212,10 @@ const ContactFormDark = (props) => {
             </label>
           </div>
           <button
+            id="submit"
             type="submit"
-            className="contact-form-dark-button thq-button-filled"
+            Action
+            className="contact-form-dark-button thq-button-filled-dark"
           >
             <span className="thq-body-small">{props.action}</span>
           </button>
@@ -230,15 +226,15 @@ const ContactFormDark = (props) => {
 }
 
 ContactFormDark.defaultProps = {
-  address: 'Lebanon, Tripoli, Boulevard',
+  address: 'Lebanon, Tripoli, Ashir Dayeh Street',
   rootClassName: '',
   logoAlt: 'image',
   action: 'SUBMIT',
-  logoSrc: '/cashover-1500h.webp',
+  logoSrc: '/cashover-1500h.png',
   content1: 'Our team will get back to you within 24 hrs',
   phone: '+961 81 350 616',
   heading: 'CONTACT US',
-  email: 'contactus@overlab.io',
+  email: 'support@cashover.money',
   content2: 'Get in touch with us today!',
 }
 

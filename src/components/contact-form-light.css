@@ -109,6 +109,9 @@
 .contact-form-light-text08 {
   font-family: "Raleway";
 }
+.contact-form-light-email {
+  text-decoration: none;
+}
 .contact-form-light-content4 {
   flex: 1;
 }
@@ -125,6 +128,9 @@
 }
 .contact-form-light-text09 {
   font-family: "Raleway";
+}
+.contact-form-light-phone {
+  text-decoration: none;
 }
 .contact-form-light-row1 {
   width: 419px;
@@ -151,6 +157,7 @@
   width: 100px;
   object-fit: cover;
 }
+
 
 @media(max-width: 991px) {
   .contact-form-light-form {

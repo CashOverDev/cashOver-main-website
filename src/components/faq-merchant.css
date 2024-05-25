@@ -99,6 +99,9 @@
   flex-direction: row;
   justify-content: space-between;
 }
+.faq-merchant-navlink {
+  text-decoration: underline;
+}
 .faq-merchant-faq3 {
   width: 100%;
   align-items: flex-start;
@@ -223,14 +226,17 @@
   align-self: stretch;
   align-items: center;
 }
-.faq-merchant-text5 {
+.faq-merchant-text7 {
   font-size: 32px;
   text-align: center;
   text-transform: uppercase;
 }
-.faq-merchant-text6 {
+.faq-merchant-text8 {
   font-size: 20px;
   text-align: center;
+}
+.faq-merchant-root-class-name {
+  background-color: var(--dl-color-theme-neutral-light);
 }
 
 @media(max-width: 1600px) {

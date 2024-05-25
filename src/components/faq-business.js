@@ -58,21 +58,10 @@ const FAQBusiness = (props) => {
               {faq1Visible && (
                 <div className="faq-business-container03">
                   <span className="thq-body-small">
-                    Lorem ipsum dolor sit amet. Est eaque sint ut blanditiis
-                    sunt aut deleniti illum non repudiandae voluptatem. Aut
-                    praesentium doloribus qui distinctio neque ut unde
-                    temporibus. Cum exercitationem eveniet in omnis animi in
-                    corporis nulla. Sed tempora excepturi et voluptatem modi et
-                    exercitationem voluptate cum illum quisquam 33 quia
-                    blanditiis eos minus consequatur.Ut neque quam qui
-                    dignissimos voluptates ut voluptate totam aut consequuntur
-                    quod. Ut voluptas incidunt ut fuga nostrum ut quaerat enim
-                    eum earum tenetur? Est esse harum et Quis officiis et enim
-                    amet.Et minima tempore et neque voluptatem eos amet officiis
-                    et temporibus Quis. Et suscipit esse id nemo sunt At nihil
-                    earum et consequatur fuga aut sapiente voluptate est
-                    cupiditate esse non dolor cumque. Ut obcaecati recusandae et
-                    beatae quae qui doloremque eligendi sit eaque labore.
+                    CashOver is an integrated payroll system that you can manage
+                    directly from your account, anywhere and anytime. Assign
+                    permissions and decrease administrative and accounting
+                    workload. One tap to pay everyone.
                   </span>
                 </div>
               )}
@@ -118,11 +107,9 @@ const FAQBusiness = (props) => {
               {faq2Visible && (
                 <div className="faq-business-container06">
                   <span className="thq-body-small">
-                    Et minima tempore et neque voluptatem eos amet officiis et
-                    temporibus Quis. Et suscipit esse id nemo sunt At nihil
-                    earum et consequatur fuga aut sapiente voluptate est
-                    cupiditate esse non dolor cumque. Ut obcaecati recusandae et
-                    beatae quae qui doloremque eligendi sit eaque labore.
+                    CashOver Business supports a minimum of 5 employees, all the
+                    way up to 10,000. With detailed payment slips and 24/7
+                    support.
                   </span>
                 </div>
               )}
@@ -168,10 +155,10 @@ const FAQBusiness = (props) => {
               {faq3Visible && (
                 <div className="faq-business-container09">
                   <span className="thq-body-small">
-                    A quia temporibus aut ullam assumenda vel eius sapiente ut
-                    eligendi molestias. Ex ipsum incidunt ut excepturi eaque sed
-                    nulla quia qui exercitationem alias aut consequuntur nihil
-                    et animi voluptas.
+                    Employees can cash-out their money either through an ATM
+                    (Contact support to apply for an ATM inside your business)
+                    or an agent. They can also use their account to buy from
+                    store, purchase in-app services and much more.
                   </span>
                 </div>
               )}
@@ -217,10 +204,10 @@ const FAQBusiness = (props) => {
               {faq4Visible && (
                 <div className="faq-business-container12">
                   <span className="thq-body-small">
-                    A quia temporibus aut ullam assumenda vel eius sapiente ut
-                    eligendi molestias. Ex ipsum incidunt ut excepturi eaque sed
-                    nulla quia qui exercitationem alias aut consequuntur nihil
-                    et animi voluptas.
+                    CashOver covers 3 currencies. US Dollars, Lebanese Lira and
+                    USDT crypto-currency. You can pay employees in multiple
+                    currencies in one salary divided between LBP or USD for
+                    example.
                   </span>
                 </div>
               )}
@@ -266,21 +253,12 @@ const FAQBusiness = (props) => {
               {faq5Visible && (
                 <div className="faq-business-container15">
                   <span className="thq-body-small">
-                    Lorem ipsum dolor sit amet. Est eaque sint ut blanditiis
-                    sunt aut deleniti illum non repudiandae voluptatem. Aut
-                    praesentium doloribus qui distinctio neque ut unde
-                    temporibus. Cum exercitationem eveniet in omnis animi in
-                    corporis nulla. Sed tempora excepturi et voluptatem modi et
-                    exercitationem voluptate cum illum quisquam 33 quia
-                    blanditiis eos minus consequatur.Ut neque quam qui
-                    dignissimos voluptates ut voluptate totam aut consequuntur
-                    quod. Ut voluptas incidunt ut fuga nostrum ut quaerat enim
-                    eum earum tenetur? Est esse harum et Quis officiis et enim
-                    amet.Et minima tempore et neque voluptatem eos amet officiis
-                    et temporibus Quis. Et suscipit esse id nemo sunt At nihil
-                    earum et consequatur fuga aut sapiente voluptate est
-                    cupiditate esse non dolor cumque. Ut obcaecati recusandae et
-                    beatae quae qui doloremque eligendi sit eaque labore.
+                    No, CashOver is not a bank. CashOver is a digital platform
+                    that facilitates secure and efficient transactions,
+                    including cashing out USDT, transferring USDT, USD, and LBP
+                    between users, and managing payments for merchants. It
+                    provides services similar to those of a bank but operates as
+                    a financial technology company.
                   </span>
                 </div>
               )}
@@ -298,13 +276,13 @@ const FAQBusiness = (props) => {
 }
 
 FAQBusiness.defaultProps = {
-  faq2Question: 'Frequently Asked Questions',
-  faq5Question: 'Frequently Asked Questions',
+  faq2Question: 'How many employees can CashOver Business support?',
+  faq5Question: 'Is CashOver a bank?',
   heading2: 'Still have a question?',
-  faq1Question: 'Frequently Asked Questions',
-  faq3Question: 'Frequently Asked Questions',
+  faq1Question: 'How can my business benefit from CashOver?',
+  faq3Question: 'How can my employees cash-out their money?',
   content2: 'Do not hesitate to contact us to answer your inquiries',
-  faq4Question: 'Frequently Asked Questions',
+  faq4Question: 'What currencies does CashOver support?',
   rootClassName: '',
 }
 

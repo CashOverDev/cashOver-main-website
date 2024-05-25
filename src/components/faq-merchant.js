@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 import PropTypes from 'prop-types'
 
@@ -58,21 +59,10 @@ const FAQMerchant = (props) => {
               {faq1Visible && (
                 <div className="faq-merchant-container03">
                   <span className="thq-body-small">
-                    Lorem ipsum dolor sit amet. Est eaque sint ut blanditiis
-                    sunt aut deleniti illum non repudiandae voluptatem. Aut
-                    praesentium doloribus qui distinctio neque ut unde
-                    temporibus. Cum exercitationem eveniet in omnis animi in
-                    corporis nulla. Sed tempora excepturi et voluptatem modi et
-                    exercitationem voluptate cum illum quisquam 33 quia
-                    blanditiis eos minus consequatur.Ut neque quam qui
-                    dignissimos voluptates ut voluptate totam aut consequuntur
-                    quod. Ut voluptas incidunt ut fuga nostrum ut quaerat enim
-                    eum earum tenetur? Est esse harum et Quis officiis et enim
-                    amet.Et minima tempore et neque voluptatem eos amet officiis
-                    et temporibus Quis. Et suscipit esse id nemo sunt At nihil
-                    earum et consequatur fuga aut sapiente voluptate est
-                    cupiditate esse non dolor cumque. Ut obcaecati recusandae et
-                    beatae quae qui doloremque eligendi sit eaque labore.
+                    Becoming a CashOver Merchant is pretty easy. Tap on create
+                    account at the top of the screen or inside the menu button.
+                    From the sign up page, tap Merchant. Follow the instructions
+                    and you are ready to start selling and receiving money.
                   </span>
                 </div>
               )}
@@ -118,11 +108,18 @@ const FAQMerchant = (props) => {
               {faq2Visible && (
                 <div className="faq-merchant-container06">
                   <span className="thq-body-small">
-                    Et minima tempore et neque voluptatem eos amet officiis et
-                    temporibus Quis. Et suscipit esse id nemo sunt At nihil
-                    earum et consequatur fuga aut sapiente voluptate est
-                    cupiditate esse non dolor cumque. Ut obcaecati recusandae et
-                    beatae quae qui doloremque eligendi sit eaque labore.
+                    <span className="">
+                      For info about fees and our services, tap
+                      <span
+                        dangerouslySetInnerHTML={{
+                          __html: ' ',
+                        }}
+                      />
+                    </span>
+                    <Link to="/our-fees" className="faq-merchant-navlink">
+                      here
+                    </Link>
+                    <span className="">.</span>
                   </span>
                 </div>
               )}
@@ -168,10 +165,13 @@ const FAQMerchant = (props) => {
               {faq3Visible && (
                 <div className="faq-merchant-container09">
                   <span className="thq-body-small">
-                    A quia temporibus aut ullam assumenda vel eius sapiente ut
-                    eligendi molestias. Ex ipsum incidunt ut excepturi eaque sed
-                    nulla quia qui exercitationem alias aut consequuntur nihil
-                    et animi voluptas.
+                    CashOver Merchants benefit from secure and efficient payment
+                    processing by scanning QR codes for USDT, USD, and LBP
+                    transactions. The platform enables detailed income pattern
+                    analysis, reduces theft risk by securing funds as e-money,
+                    and offers low-fee withdrawals. Additionally, merchants can
+                    create and manage product lists and assign employees to
+                    handle payments on their behalf.
                   </span>
                 </div>
               )}
@@ -217,10 +217,10 @@ const FAQMerchant = (props) => {
               {faq4Visible && (
                 <div className="faq-merchant-container12">
                   <span className="thq-body-small">
-                    A quia temporibus aut ullam assumenda vel eius sapiente ut
-                    eligendi molestias. Ex ipsum incidunt ut excepturi eaque sed
-                    nulla quia qui exercitationem alias aut consequuntur nihil
-                    et animi voluptas.
+                    Yes, you can integrate CashOver into your website or mobile
+                    app using our flexible API and SDK. This allows you to
+                    seamlessly offer secure payment services and enhance your
+                    platform&apos;s functionality with CashOver&apos;s features.
                   </span>
                 </div>
               )}
@@ -266,21 +266,10 @@ const FAQMerchant = (props) => {
               {faq5Visible && (
                 <div className="faq-merchant-container15">
                   <span className="thq-body-small">
-                    Lorem ipsum dolor sit amet. Est eaque sint ut blanditiis
-                    sunt aut deleniti illum non repudiandae voluptatem. Aut
-                    praesentium doloribus qui distinctio neque ut unde
-                    temporibus. Cum exercitationem eveniet in omnis animi in
-                    corporis nulla. Sed tempora excepturi et voluptatem modi et
-                    exercitationem voluptate cum illum quisquam 33 quia
-                    blanditiis eos minus consequatur.Ut neque quam qui
-                    dignissimos voluptates ut voluptate totam aut consequuntur
-                    quod. Ut voluptas incidunt ut fuga nostrum ut quaerat enim
-                    eum earum tenetur? Est esse harum et Quis officiis et enim
-                    amet.Et minima tempore et neque voluptatem eos amet officiis
-                    et temporibus Quis. Et suscipit esse id nemo sunt At nihil
-                    earum et consequatur fuga aut sapiente voluptate est
-                    cupiditate esse non dolor cumque. Ut obcaecati recusandae et
-                    beatae quae qui doloremque eligendi sit eaque labore.
+                    Yes, as a CashOver Merchant, you can create and manage a
+                    free menu or product list. This feature is easily accessible
+                    through our platform and can be viewed on the web and edited
+                    in-app, helping you efficiently manage your offerings.
                   </span>
                 </div>
               )}
@@ -289,8 +278,8 @@ const FAQMerchant = (props) => {
           </div>
         </div>
         <div className="faq-merchant-content thq-flex-column thq-section-max-width">
-          <h2 className="faq-merchant-text5">{props.heading2}</h2>
-          <p className="faq-merchant-text6 thq-body-large">{props.content2}</p>
+          <h2 className="faq-merchant-text7">{props.heading2}</h2>
+          <p className="faq-merchant-text8 thq-body-large">{props.content2}</p>
         </div>
       </div>
     </div>
@@ -298,13 +287,13 @@ const FAQMerchant = (props) => {
 }
 
 FAQMerchant.defaultProps = {
-  faq3Question: 'Frequently Asked Questions',
+  faq3Question: 'What are the benefits CashOver Merchants have?',
   rootClassName: '',
-  faq1Question: 'Frequently Asked Questions',
-  faq4Question: 'Frequently Asked Questions',
+  faq1Question: 'How can I become a CashOver Merchant?',
+  faq4Question: 'Can I use CashOver on my website or mobile app?',
   heading2: 'Still have a question?',
-  faq2Question: 'Frequently Asked Questions',
-  faq5Question: 'Frequently Asked Questions',
+  faq2Question: 'What are the fees applied on Merchant accounts?',
+  faq5Question: 'Do I get a free menu or product list as a Merchant?',
   content2: 'Do not hesitate to contact us to answer your inquiries',
 }
 

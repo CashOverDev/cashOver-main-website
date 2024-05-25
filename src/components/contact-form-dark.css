@@ -16,6 +16,7 @@
 .contact-form-dark-logo {
   height: 3rem;
   object-fit: cover;
+  text-decoration: none;
 }
 .contact-form-dark-text {
   fill: var(--dl-color-custom-neutral-light);
@@ -214,6 +215,11 @@
 .contact-form-dark-button {
   align-self: flex-start;
 }
+
+
+
+
+
 
 
 

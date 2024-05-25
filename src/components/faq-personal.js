@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 import PropTypes from 'prop-types'
 
@@ -58,21 +59,21 @@ const FAQPersonal = (props) => {
               {faq1Visible && (
                 <div className="faq-personal-container03">
                   <span className="thq-body-small">
-                    Lorem ipsum dolor sit amet. Est eaque sint ut blanditiis
-                    sunt aut deleniti illum non repudiandae voluptatem. Aut
-                    praesentium doloribus qui distinctio neque ut unde
-                    temporibus. Cum exercitationem eveniet in omnis animi in
-                    corporis nulla. Sed tempora excepturi et voluptatem modi et
-                    exercitationem voluptate cum illum quisquam 33 quia
-                    blanditiis eos minus consequatur.Ut neque quam qui
-                    dignissimos voluptates ut voluptate totam aut consequuntur
-                    quod. Ut voluptas incidunt ut fuga nostrum ut quaerat enim
-                    eum earum tenetur? Est esse harum et Quis officiis et enim
-                    amet.Et minima tempore et neque voluptatem eos amet officiis
-                    et temporibus Quis. Et suscipit esse id nemo sunt At nihil
-                    earum et consequatur fuga aut sapiente voluptate est
-                    cupiditate esse non dolor cumque. Ut obcaecati recusandae et
-                    beatae quae qui doloremque eligendi sit eaque labore.
+                    <span className="">
+                      For fees and details about our services, tap
+                      <span
+                        dangerouslySetInnerHTML={{
+                          __html: ' ',
+                        }}
+                      />
+                    </span>
+                    <Link to="/our-fees" className="faq-personal-navlink">
+                      here
+                    </Link>
+                    <span className="">
+                      . Always refer to this list to be updated about the fees
+                      and changes in pricing of any service.
+                    </span>
                   </span>
                 </div>
               )}
@@ -118,11 +119,25 @@ const FAQPersonal = (props) => {
               {faq2Visible && (
                 <div className="faq-personal-container06">
                   <span className="thq-body-small">
-                    Et minima tempore et neque voluptatem eos amet officiis et
-                    temporibus Quis. Et suscipit esse id nemo sunt At nihil
-                    earum et consequatur fuga aut sapiente voluptate est
-                    cupiditate esse non dolor cumque. Ut obcaecati recusandae et
-                    beatae quae qui doloremque eligendi sit eaque labore.
+                    <span className="">
+                      CashOver supports Binance Smart Chain network. Make sure
+                      that every deposit that you do is over the BSC network. If
+                      you are not familiar with BSC network, refer to this
+                      <span
+                        dangerouslySetInnerHTML={{
+                          __html: ' ',
+                        }}
+                      />
+                    </span>
+                    <a
+                      href="https://academy.binance.com/en/articles/connecting-metamask-to-binance-smart-chain"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="faq-personal-link"
+                    >
+                      guide here
+                    </a>
+                    <span className=""> for more info to get you started.</span>
                   </span>
                 </div>
               )}
@@ -168,10 +183,26 @@ const FAQPersonal = (props) => {
               {faq3Visible && (
                 <div className="faq-personal-container09">
                   <span className="thq-body-small">
-                    A quia temporibus aut ullam assumenda vel eius sapiente ut
-                    eligendi molestias. Ex ipsum incidunt ut excepturi eaque sed
-                    nulla quia qui exercitationem alias aut consequuntur nihil
-                    et animi voluptas.
+                    <span className="">
+                      There are 3 simple ways to topup your USDT balance. One,
+                      you can send copy your CashOver wallet address and send
+                      USDT from an external wallet (non-cashover wallet), the
+                      app will automatically update your balance. Two, you can
+                      receive USDT from another CashOver user. Finally, you can
+                      buy USDT using USD in your app. For any issues, contact us
+                      at
+                      <span
+                        dangerouslySetInnerHTML={{
+                          __html: ' ',
+                        }}
+                      />
+                    </span>
+                    <a
+                      href="mailto:support@cashover.money?subject="
+                      className="faq-personal-link1"
+                    >
+                      support@cashover.money
+                    </a>
                   </span>
                 </div>
               )}
@@ -217,10 +248,9 @@ const FAQPersonal = (props) => {
               {faq4Visible && (
                 <div className="faq-personal-container12">
                   <span className="thq-body-small">
-                    A quia temporibus aut ullam assumenda vel eius sapiente ut
-                    eligendi molestias. Ex ipsum incidunt ut excepturi eaque sed
-                    nulla quia qui exercitationem alias aut consequuntur nihil
-                    et animi voluptas.
+                    In CashOver app, swaps are called Buy or Sell. You can
+                    either buy USDT using USD or sell your USDT to increase your
+                    USD balance. All with one tap!
                   </span>
                 </div>
               )}
@@ -266,21 +296,10 @@ const FAQPersonal = (props) => {
               {faq5Visible && (
                 <div className="faq-personal-container15">
                   <span className="thq-body-small">
-                    Lorem ipsum dolor sit amet. Est eaque sint ut blanditiis
-                    sunt aut deleniti illum non repudiandae voluptatem. Aut
-                    praesentium doloribus qui distinctio neque ut unde
-                    temporibus. Cum exercitationem eveniet in omnis animi in
-                    corporis nulla. Sed tempora excepturi et voluptatem modi et
-                    exercitationem voluptate cum illum quisquam 33 quia
-                    blanditiis eos minus consequatur.Ut neque quam qui
-                    dignissimos voluptates ut voluptate totam aut consequuntur
-                    quod. Ut voluptas incidunt ut fuga nostrum ut quaerat enim
-                    eum earum tenetur? Est esse harum et Quis officiis et enim
-                    amet.Et minima tempore et neque voluptatem eos amet officiis
-                    et temporibus Quis. Et suscipit esse id nemo sunt At nihil
-                    earum et consequatur fuga aut sapiente voluptate est
-                    cupiditate esse non dolor cumque. Ut obcaecati recusandae et
-                    beatae quae qui doloremque eligendi sit eaque labore.
+                    Transferring any currency in CashOver app is pretty
+                    straightforward. You can scan the recipient QR-Code and
+                    input the amount to send or you can use their phone number
+                    to to do so.
                   </span>
                 </div>
               )}
@@ -289,8 +308,8 @@ const FAQPersonal = (props) => {
           </div>
         </div>
         <div className="faq-personal-content thq-flex-column thq-section-max-width">
-          <h2 className="faq-personal-text5">{props.heading2}</h2>
-          <p className="faq-personal-text6">{props.content2}</p>
+          <h2 className="faq-personal-text10">{props.heading2}</h2>
+          <p className="faq-personal-text11">{props.content2}</p>
         </div>
       </div>
     </div>
@@ -298,13 +317,13 @@ const FAQPersonal = (props) => {
 }
 
 FAQPersonal.defaultProps = {
-  faq5Question: 'Frequently Asked Questions',
+  faq5Question: 'How can I transfer money to another user?',
   content2: 'Do not hesitate to contact us to answer your inquiries',
-  faq1Question: 'Frequently Asked Questions',
+  faq1Question: 'Where can I check CashOver fees?',
   heading2: 'Still have a question?',
-  faq3Question: 'Frequently Asked Questions',
-  faq4Question: 'Frequently Asked Questions',
-  faq2Question: 'Frequently Asked Questions',
+  faq3Question: 'How can I topup my USDT balance in CashOver app?',
+  faq4Question: 'How can I swap my USDT for USD or vice-versa?',
+  faq2Question: 'What network does CashOver support?',
   rootClassName: '',
 }
 
