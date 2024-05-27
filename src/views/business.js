@@ -34,7 +34,7 @@ const Business = (props) => {
       <NavigationBarDark rootClassName="navigation-bar-dark-root-class-name1"></NavigationBarDark>
       <header className="business-column">
         <div className="business-dummy"></div>
-        <img alt="image" src="/hero.png" className="business-image" />
+        <img alt="image" src="/payroll.png" className="business-image" />
         <div className="business-row">
           <div className="business-column01">
             <span className="business-text">
@@ -48,10 +48,18 @@ const Business = (props) => {
               money, pay salaries, and calculate taxes at super cheap fees!
             </h2>
             <div className="business-buttons">
-              <button type="button" className="thq-button-filled-dark">
+              <Link
+                to="/signup"
+                className="business-action1 thq-button-filled-dark"
+              >
                 Create Account
-              </button>
-              <button className="thq-button-outline-dark">Learn More</button>
+              </Link>
+              <a
+                href="#Features"
+                className="business-action2 thq-button-outline-dark"
+              >
+                Learn More
+              </a>
             </div>
           </div>
           <img
@@ -88,7 +96,7 @@ const Business = (props) => {
           </div>
         </div>
       </div>
-      <div className="business-column05">
+      <div id="Features" className="business-column05">
         <h2 className="business-text009">
           <span className="business-text010">better</span>
           <span> than a bank</span>

@@ -4,7 +4,6 @@
   display: flex;
   z-index: 1;
   position: fixed;
-  animation: slideInDown 1s both;
   border-color: var(--dl-color-gray-black);
   border-style: solid;
   border-width: 1px;
@@ -67,7 +66,7 @@
   text-decoration: none;
 }
 .navigation-bar-general-buttons {
-  gap: var(--dl-space-space-twounits);
+  gap: var(--dl-space-space-unit);
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -110,8 +109,12 @@
   margin-bottom: var(--dl-space-space-threeunits);
   justify-content: space-between;
 }
+.navigation-bar-general-navlink1 {
+  display: contents;
+}
 .navigation-bar-general-logo {
   height: 3rem;
+  text-decoration: none;
 }
 .navigation-bar-general-close-menu {
   display: flex;
@@ -119,8 +122,8 @@
   justify-content: center;
 }
 .navigation-bar-general-icon02 {
-  width: var(--dl-size-size-xsmall);
-  height: var(--dl-size-size-xsmall);
+  width: 24px;
+  height: 24px;
 }
 .navigation-bar-general-links1 {
   gap: var(--dl-space-space-unit);
@@ -130,16 +133,58 @@
   align-items: flex-start;
   flex-direction: column;
 }
+.navigation-bar-general-link11 {
+  text-decoration: none;
+}
+.navigation-bar-general-link21 {
+  text-decoration: none;
+}
+.navigation-bar-general-link31 {
+  text-decoration: none;
+}
+.navigation-bar-general-link41 {
+  text-decoration: none;
+}
+.navigation-bar-general-link61 {
+  text-decoration: none;
+}
+.navigation-bar-general-link51 {
+  text-decoration: none;
+}
 .navigation-bar-general-buttons1 {
-  gap: var(--dl-space-space-twounits);
+  gap: var(--dl-space-space-unit);
   display: flex;
   margin-top: var(--dl-space-space-twounits);
   align-items: center;
   flex-direction: row;
 }
+.navigation-bar-general-action11 {
+  text-decoration: none;
+}
+.navigation-bar-general-action21 {
+  text-decoration: none;
+}
 .navigation-bar-general-icon-group {
   gap: var(--dl-space-space-twounits);
   display: flex;
+}
+.navigation-bar-general-link {
+  display: contents;
+}
+.navigation-bar-general-icon04 {
+  text-decoration: none;
+}
+.navigation-bar-general-link1 {
+  display: contents;
+}
+.navigation-bar-general-icon06 {
+  text-decoration: none;
+}
+.navigation-bar-general-link2 {
+  display: contents;
+}
+.navigation-bar-general-icon08 {
+  text-decoration: none;
 }
 
 
@@ -162,6 +207,10 @@
   .navigation-bar-general-burger-menu {
     display: flex;
   }
+  .navigation-bar-general-icon {
+    width: 24px;
+    height: 24px;
+  }
 }
 @media(max-width: 767px) {
   .navigation-bar-general-navbar-interactive {
@@ -183,5 +232,12 @@
   }
   .navigation-bar-general-mobile-menu {
     padding: var(--dl-space-space-unit);
+  }
+  .navigation-bar-general-logo {
+    height: 2rem;
+  }
+  .navigation-bar-general-icon02 {
+    width: 24px;
+    height: 24px;
   }
 }

@@ -102,6 +102,18 @@
   margin-bottom: var(--dl-space-space-twounits);
   text-transform: uppercase;
 }
+.faq-text5 {
+  fill: var(--dl-color-primary-300);
+  color: var(--dl-color-primary-300);
+  font-size: 24px;
+  align-self: center;
+  font-style: normal;
+  margin-top: var(--dl-space-space-twounits);
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: var(--dl-space-space-twounits);
+  text-transform: uppercase;
+}
 @media(max-width: 1600px) {
   .faq-column1 {
     max-width: 1200px;
@@ -111,6 +123,13 @@
   }
   .faq-text1 {
     font-size: 18px;
+  }
+  .faq-text5 {
+    color: var(--dl-color-primary-300);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
   }
 }
 @media(max-width: 1200px) {
@@ -154,6 +173,12 @@
   }
   .faq-icon {
     margin-top: var(--dl-space-space-twounits);
+  }
+}
+@media(max-width: 767px) {
+  .faq-column {
+    padding-left: var(--dl-space-space-unit);
+    padding-right: var(--dl-space-space-unit);
   }
 }
 @media(max-width: 479px) {

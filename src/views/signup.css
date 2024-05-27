@@ -160,8 +160,9 @@
   font-weight: 500;
   line-height: 1.5;
 }
-.signup-image1 {
+.signup-image-qr-code {
   width: 150px;
+  height: auto;
   margin-top: var(--dl-space-space-twounits);
   object-fit: cover;
 }
@@ -261,10 +262,9 @@
 }
 @media(max-width: 479px) {
   .signup-bar {
-    gap: var(--dl-space-space-unit);
     padding-left: var(--dl-space-space-unit);
     padding-right: var(--dl-space-space-unit);
-    justify-content: center;
+    justify-content: space-between;
   }
   .signup-image1 {
     height: 1.5rem;
@@ -273,7 +273,7 @@
     font-size: 14px;
   }
   .signup-container1 {
-    width: auto;
+    width: 100%;
   }
   .signup-choices {
     padding-left: var(--dl-space-space-unit);
@@ -281,14 +281,14 @@
   }
   .signup-box {
     width: 100%;
-    padding-left: var(--dl-space-space-unit);
-    padding-right: var(--dl-space-space-unit);
+    padding-left: 8px;
+    padding-right: 8px;
   }
   .signup-text4 {
     width: 100%;
   }
   .signup-stores {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     flex-direction: row;
   }

@@ -4,7 +4,6 @@
   display: flex;
   z-index: 1;
   position: fixed;
-  animation: slideInDown 1s both;
   border-color: var(--dl-color-gray-black);
   border-style: solid;
   border-width: 1px;
@@ -64,7 +63,7 @@
   text-decoration: none;
 }
 .navigation-bar-home-buttons {
-  gap: var(--dl-space-space-twounits);
+  gap: var(--dl-space-space-unit);
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -107,8 +106,12 @@
   margin-bottom: var(--dl-space-space-threeunits);
   justify-content: space-between;
 }
+.navigation-bar-home-navlink1 {
+  display: contents;
+}
 .navigation-bar-home-logo {
   height: 3rem;
+  text-decoration: none;
 }
 .navigation-bar-home-close-menu {
   display: flex;
@@ -116,8 +119,8 @@
   justify-content: center;
 }
 .navigation-bar-home-icon02 {
-  width: var(--dl-size-size-xsmall);
-  height: var(--dl-size-size-xsmall);
+  width: 24px;
+  height: 24px;
 }
 .navigation-bar-home-links1 {
   gap: var(--dl-space-space-unit);
@@ -127,8 +130,26 @@
   align-items: flex-start;
   flex-direction: column;
 }
+.navigation-bar-home-link11 {
+  text-decoration: none;
+}
+.navigation-bar-home-link21 {
+  text-decoration: none;
+}
+.navigation-bar-home-link31 {
+  text-decoration: none;
+}
+.navigation-bar-home-link41 {
+  text-decoration: none;
+}
+.navigation-bar-home-link61 {
+  text-decoration: none;
+}
+.navigation-bar-home-link51 {
+  text-decoration: none;
+}
 .navigation-bar-home-buttons1 {
-  gap: var(--dl-space-space-twounits);
+  gap: var(--dl-space-space-unit);
   display: flex;
   margin-top: var(--dl-space-space-twounits);
   align-items: center;
@@ -137,6 +158,24 @@
 .navigation-bar-home-icon-group {
   gap: var(--dl-space-space-twounits);
   display: flex;
+}
+.navigation-bar-home-link {
+  display: contents;
+}
+.navigation-bar-home-icon04 {
+  text-decoration: none;
+}
+.navigation-bar-home-link1 {
+  display: contents;
+}
+.navigation-bar-home-icon06 {
+  text-decoration: none;
+}
+.navigation-bar-home-link2 {
+  display: contents;
+}
+.navigation-bar-home-icon08 {
+  text-decoration: none;
 }
 
 @media(max-width: 1200px) {
@@ -179,5 +218,8 @@
   }
   .navigation-bar-home-mobile-menu {
     padding: var(--dl-space-space-unit);
+  }
+  .navigation-bar-home-logo {
+    height: 2rem;
   }
 }

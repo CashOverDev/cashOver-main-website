@@ -1,4 +1,71 @@
-.our-fees-container {
+/* Add this CSS to your cash-over-fees.css file */
+
+.cash-over-fees-container02 table,
+.cash-over-fees-container04 table,
+.cash-over-fees-container06 table,
+.cash-over-fees-container07 table,
+.cash-over-fees-container08 table,
+.cash-over-fees-container10 table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px; /* Adjust margin as needed */
+  height: 100%;
+}
+
+.cash-over-fees-container02 td,
+.cash-over-fees-container04 td,
+.cash-over-fees-container06 td,
+.cash-over-fees-container07 td,
+.cash-over-fees-container08 td,
+.cash-over-fees-container10 td {
+  border: 1px solid #d3d3d3;
+  text-align: center;
+  font-family: Tahoma;
+  color: #616161;
+  width: 33.33%; /* Each cell takes one-third of the table width */
+  height: 50px; /* Set a fixed height for all cells */
+}
+
+.cash-over-fees-container02 tr:first-child td,
+.cash-over-fees-container04 tr:first-child td,
+.cash-over-fees-container06 tr:first-child td,
+.cash-over-fees-container07 tr:first-child td,
+.cash-over-fees-container08 tr:first-child td,
+.cash-over-fees-container10 tr:first-child td {
+  border-top: none;
+}
+
+.cash-over-fees-container02 tr:last-child td,
+.cash-over-fees-container04 tr:last-child td,
+.cash-over-fees-container06 tr:last-child td,
+.cash-over-fees-container07 tr:last-child td,
+.cash-over-fees-container08 tr:last-child td,
+.cash-over-fees-container10 tr:last-child td {
+  border-bottom: none;
+}
+
+.cash-over-fees-container02 tr td:first-child,
+.cash-over-fees-container04 tr td:first-child,
+.cash-over-fees-container06 tr td:first-child,
+.cash-over-fees-container07 tr td:first-child,
+.cash-over-fees-container08 tr td:first-child,
+.cash-over-fees-container10 tr td:first-child {
+  border-left: none;
+}
+
+.cash-over-fees-container02 tr td:last-child,
+.cash-over-fees-container04 tr td:last-child,
+.cash-over-fees-container06 tr td:last-child,
+.cash-over-fees-container07 tr td:last-child,
+.cash-over-fees-container08 tr td:last-child,
+.cash-over-fees-container10 tr td:last-child {
+  border-right: none;
+}
+
+
+
+
+.cash-over-fees-container {
   width: 100%;
   display: flex;
   overflow: auto;
@@ -7,7 +74,7 @@
   flex-direction: column;
   justify-content: center;
 }
-.our-fees-hero {
+.cash-over-fees-hero {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -23,7 +90,7 @@
   border-left-width: 0px;
   border-right-width: 0px;
 }
-.our-fees-dummy {
+.cash-over-fees-dummy {
   flex: 0 0 auto;
   width: 200px;
   height: 100px;
@@ -31,27 +98,27 @@
   align-items: flex-start;
   flex-direction: column;
 }
-.our-fees-column {
+.cash-over-fees-column {
   flex: 0 0 auto;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-.our-fees-text {
+.cash-over-fees-text {
   font-size: 48px;
   font-style: normal;
   text-align: center;
   font-weight: 900;
   text-transform: uppercase;
 }
-.our-fees-text01 {
+.cash-over-fees-text01 {
   width: auto;
   max-width: 800px;
   margin-top: var(--dl-space-space-twounits);
   text-align: center;
   line-height: 1.5;
 }
-.our-fees-row {
+.cash-over-fees-row {
   flex: 0 0 auto;
   width: auto;
   height: auto;
@@ -61,7 +128,7 @@
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
-.our-fees-link {
+.cash-over-fees-link {
   text-align: center;
   padding-top: var(--dl-space-space-halfunit);
   border-color: var(--dl-color-gray-black);
@@ -75,7 +142,7 @@
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.our-fees-link1 {
+.cash-over-fees-link1 {
   text-align: center;
   padding-top: var(--dl-space-space-halfunit);
   border-color: var(--dl-color-gray-black);
@@ -88,7 +155,7 @@
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
-.our-fees-link2 {
+.cash-over-fees-link2 {
   text-align: center;
   padding-top: var(--dl-space-space-halfunit);
   border-color: var(--dl-color-gray-black);
@@ -100,7 +167,7 @@
   border-left-width: 1px;
   border-right-width: 0px;
 }
-.our-fees-link3 {
+.cash-over-fees-link3 {
   text-align: center;
   padding-top: var(--dl-space-space-halfunit);
   border-color: var(--dl-color-gray-black);
@@ -113,7 +180,7 @@
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
-.our-fees-row1 {
+.cash-over-fees-row1 {
   flex: initial;
   width: auto;
   height: auto;
@@ -126,29 +193,29 @@
   margin-bottom: var(--dl-space-space-twounits);
   justify-content: center;
 }
-.our-fees-icon {
+.cash-over-fees-icon {
   fill: var(--dl-color-gray-black);
   width: 42px;
   height: 24px;
 }
-.our-fees-text04 {
+.cash-over-fees-text04 {
   fill: var(--dl-color-gray-black);
   color: var(--dl-color-gray-black);
   padding: 0px;
   align-self: center;
   margin-top: 0px;
 }
-.our-fees-icon2 {
+.cash-over-fees-icon2 {
   fill: var(--dl-color-gray-black);
   width: 42px;
   height: 24px;
 }
-.our-fees-personal {
+.cash-over-fees-personal {
   flex: 0 0 auto;
   width: 100%;
   height: auto;
   display: flex;
-  max-width: 800px;
+  max-width: 100%;
   align-self: center;
   align-items: center;
   padding-top: var(--dl-space-space-sixunits);
@@ -163,7 +230,7 @@
   border-left-width: 0px;
   border-right-width: 0px;
 }
-.our-fees-row2 {
+.cash-over-fees-row2 {
   gap: var(--dl-space-space-twounits);
   flex: 0 0 auto;
   width: auto;
@@ -177,12 +244,12 @@
   padding-right: var(--dl-space-space-unit);
   justify-content: center;
 }
-.our-fees-image {
+.cash-over-fees-image {
   width: 75px;
   height: 75px;
   object-fit: cover;
 }
-.our-fees-cash-over {
+.cash-over-fees-cash-over {
   font-size: 32px;
   align-self: center;
   font-style: normal;
@@ -190,16 +257,16 @@
   font-weight: 500;
   text-transform: uppercase;
 }
-.our-fees-text05 {
+.cash-over-fees-text05 {
   fill: var(--dl-color-primary-300);
   color: var(--dl-color-primary-300);
   font-size: 24px;
-  align-self: flex-start;
+  align-self: center;
   font-style: normal;
   margin-top: var(--dl-space-space-fourunits);
   font-weight: 900;
 }
-.our-fees-container01 {
+.cash-over-fees-container01 {
   flex: initial;
   width: 100%;
   height: 800px;
@@ -207,64 +274,68 @@
   align-self: center;
   margin-top: var(--dl-space-space-unit);
 }
-.our-fees-container02 {
+.cash-over-fees-container02 {
   display: contents;
 }
-.our-fees-text06 {
+.cash-over-fees-text06 {
   fill: var(--dl-color-primary-300);
   color: var(--dl-color-primary-300);
   font-size: 24px;
-  align-self: flex-start;
+  align-self: center;
   font-style: normal;
   margin-top: var(--dl-space-space-fourunits);
   font-weight: 900;
 }
-.our-fees-container03 {
+.cash-over-fees-container03 {
   width: 800px;
   height: 275px;
   margin-top: var(--dl-space-space-twounits);
 }
-.our-fees-container04 {
+.cash-over-fees-container04 {
   display: contents;
 }
-.our-fees-text07 {
+.cash-over-fees-text07 {
   fill: var(--dl-color-primary-300);
   color: var(--dl-color-primary-300);
   font-size: 24px;
-  align-self: flex-start;
+  align-self: center;
   font-style: normal;
   margin-top: var(--dl-space-space-fourunits);
   font-weight: 900;
 }
-.our-fees-container05 {
+.cash-over-fees-container05 {
   width: 100%;
+  height: 1200px;
+  max-width: 800px;
+  margin-top: var(--dl-space-space-twounits);
+}
+.cash-over-fees-container06 {
+  display: contents;
+}
+.cash-over-fees-text08 {
+  fill: var(--dl-color-primary-300);
+  color: var(--dl-color-primary-300);
+  font-size: 24px;
+  align-self: center;
+  font-style: normal;
+  margin-top: var(--dl-space-space-fourunits);
+  font-weight: 900;
+}
+.cash-over-fees-container07 {
+  width: 100%;
+  max-width: 800px;
   height: 1200px;
   margin-top: var(--dl-space-space-twounits);
 }
-.our-fees-container06 {
+.cash-over-fees-container08 {
   display: contents;
+
 }
-.our-fees-text08 {
-  fill: var(--dl-color-primary-300);
-  color: var(--dl-color-primary-300);
-  font-size: 24px;
-  align-self: flex-start;
-  font-style: normal;
-  margin-top: var(--dl-space-space-fourunits);
-  font-weight: 900;
-}
-.our-fees-container07 {
-  width: 100%;
-  margin-top: var(--dl-space-space-twounits);
-}
-.our-fees-container08 {
-  display: contents;
-}
-.our-fees-merchant {
+.cash-over-fees-merchant {
   flex: 0 0 auto;
   width: 100%;
   display: flex;
-  max-width: 800px;
+  max-width: auto;
   align-self: center;
   align-items: center;
   border-color: var(--dl-color-gray-black);
@@ -276,7 +347,7 @@
   border-left-width: 0px;
   border-right-width: 0px;
 }
-.our-fees-row3 {
+.cash-over-fees-row3 {
   gap: var(--dl-space-space-twounits);
   flex: 0 0 auto;
   width: auto;
@@ -290,12 +361,12 @@
   padding-right: var(--dl-space-space-unit);
   justify-content: center;
 }
-.our-fees-image1 {
+.cash-over-fees-image1 {
   width: 75px;
   height: 75px;
   object-fit: cover;
 }
-.our-fees-cash-over1 {
+.cash-over-fees-cash-over1 {
   font-size: 32px;
   align-self: center;
   font-style: normal;
@@ -303,10 +374,11 @@
   font-weight: 500;
   text-transform: uppercase;
 }
-.our-fees-text09 {
+.cash-over-fees-text09 {
   fill: var(--dl-color-gray-500);
   color: var(--dl-color-gray-500);
   font-size: 16px;
+  max-width: 700px;
   align-self: center;
   margin-top: var(--dl-space-space-threeunits);
   text-align: center;
@@ -314,15 +386,15 @@
   margin-left: var(--dl-space-space-threeunits);
   margin-right: var(--dl-space-space-threeunits);
 }
-.our-fees-action2 {
+.cash-over-fees-action2 {
   margin-top: var(--dl-space-space-twounits);
   text-decoration: none;
 }
-.our-fees-business {
+.cash-over-fees-business {
   flex: 0 0 auto;
   width: 100%;
   display: flex;
-  max-width: 800px;
+  max-width: auto;
   align-self: center;
   align-items: center;
   border-color: var(--dl-color-gray-black);
@@ -334,7 +406,7 @@
   border-left-width: 0px;
   border-right-width: 0px;
 }
-.our-fees-row4 {
+.cash-over-fees-row4 {
   gap: var(--dl-space-space-twounits);
   flex: 0 0 auto;
   width: auto;
@@ -348,12 +420,12 @@
   padding-right: var(--dl-space-space-unit);
   justify-content: center;
 }
-.our-fees-image2 {
+.cash-over-fees-image2 {
   width: 75px;
   height: 75px;
   object-fit: cover;
 }
-.our-fees-cash-over2 {
+.cash-over-fees-cash-over2 {
   font-size: 32px;
   align-self: center;
   font-style: normal;
@@ -361,25 +433,26 @@
   font-weight: 500;
   text-transform: uppercase;
 }
-.our-fees-container09 {
+.cash-over-fees-container09 {
   width: 100%;
   height: 530px;
+  max-width: 800px;
   margin-top: var(--dl-space-space-twounits);
 }
-.our-fees-container10 {
+.cash-over-fees-container10 {
   display: contents;
 }
-.our-fees-sd-ks {
+.cash-over-fees-sd-ks {
   flex: 0 0 auto;
   display: flex;
-  max-width: 800px;
+  max-width: auto;
   align-self: center;
   align-items: center;
   flex-direction: column;
   padding-bottom: var(--dl-space-space-sixunits);
   justify-content: center;
 }
-.our-fees-row5 {
+.cash-over-fees-row5 {
   gap: var(--dl-space-space-twounits);
   flex: 0 0 auto;
   width: auto;
@@ -393,12 +466,12 @@
   padding-right: var(--dl-space-space-unit);
   justify-content: center;
 }
-.our-fees-image3 {
+.cash-over-fees-image3 {
   width: 75px;
   height: 75px;
   object-fit: cover;
 }
-.our-fees-cash-over3 {
+.cash-over-fees-cash-over3 {
   font-size: 32px;
   align-self: center;
   font-style: normal;
@@ -406,10 +479,11 @@
   font-weight: 500;
   text-transform: uppercase;
 }
-.our-fees-text10 {
+.cash-over-fees-text10 {
   fill: var(--dl-color-gray-500);
   color: var(--dl-color-gray-500);
   font-size: 16px;
+  max-width: 700px;
   align-self: center;
   margin-top: var(--dl-space-space-threeunits);
   text-align: center;
@@ -417,175 +491,200 @@
   margin-left: var(--dl-space-space-threeunits);
   margin-right: var(--dl-space-space-threeunits);
 }
-.our-fees-navlink {
+.cash-over-fees-navlink {
   text-decoration: underline;
 }
 @media(max-width: 1600px) {
-  .our-fees-text {
+  .cash-over-fees-text {
     font-size: 42px;
   }
-  .our-fees-row2 {
+  .cash-over-fees-row2 {
     gap: var(--dl-space-space-oneandhalfunits);
   }
-  .our-fees-image {
+  .cash-over-fees-image {
     width: 60px;
     height: 60px;
   }
-  .our-fees-cash-over {
+  .cash-over-fees-cash-over {
     font-size: 28px;
   }
-  .our-fees-row3 {
+  .cash-over-fees-row3 {
     gap: var(--dl-space-space-oneandhalfunits);
   }
-  .our-fees-image1 {
+  .cash-over-fees-image1 {
     width: 60px;
     height: 60px;
   }
-  .our-fees-cash-over1 {
+  .cash-over-fees-cash-over1 {
     font-size: 28px;
   }
-  .our-fees-business {
+  .cash-over-fees-business {
     width: 100%;
   }
-  .our-fees-row4 {
+  .cash-over-fees-row4 {
     gap: var(--dl-space-space-oneandhalfunits);
   }
-  .our-fees-image2 {
+  .cash-over-fees-image2 {
     width: 60px;
     height: 60px;
   }
-  .our-fees-cash-over2 {
+  .cash-over-fees-cash-over2 {
     font-size: 28px;
   }
-  .our-fees-sd-ks {
+  .cash-over-fees-sd-ks {
     width: 100%;
   }
-  .our-fees-row5 {
+  .cash-over-fees-row5 {
     gap: var(--dl-space-space-oneandhalfunits);
   }
-  .our-fees-image3 {
+  .cash-over-fees-image3 {
     width: 60px;
     height: 60px;
   }
-  .our-fees-cash-over3 {
+  .cash-over-fees-cash-over3 {
     font-size: 28px;
   }
 }
 @media(max-width: 1200px) {
-  .our-fees-text {
+  .cash-over-fees-text {
     font-size: 38px;
   }
-  .our-fees-text01 {
+  .cash-over-fees-text01 {
     width: auto;
   }
-  .our-fees-cash-over {
+  .cash-over-fees-cash-over {
     font-size: 26px;
   }
-  .our-fees-container03 {
+  .cash-over-fees-container03 {
     width: 100%;
+    max-width: 800px;
   }
-  .our-fees-container05 {
+  .cash-over-fees-container05 {
     height: 1200px;
   }
-  .our-fees-cash-over1 {
+  .cash-over-fees-cash-over1 {
     font-size: 26px;
   }
-  .our-fees-cash-over2 {
+  .cash-over-fees-cash-over2 {
     font-size: 26px;
   }
-  .our-fees-cash-over3 {
+  .cash-over-fees-cash-over3 {
     font-size: 26px;
   }
 }
 @media(max-width: 991px) {
-  .our-fees-hero {
+  .cash-over-fees-hero {
     padding-left: var(--dl-space-space-unit);
     padding-right: var(--dl-space-space-unit);
   }
-  .our-fees-text {
+  .cash-over-fees-text {
     font-size: 32px;
   }
-  .our-fees-text01 {
+  .cash-over-fees-text01 {
     width: auto;
     max-width: 600px;
   }
 }
 @media(max-width: 767px) {
-  .our-fees-row {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+  .cash-over-fees-link {
+    font-size: 14px;
   }
-  .our-fees-row2 {
+  .cash-over-fees-link1 {
+    font-size: 14px;
+  }
+  .cash-over-fees-link2 {
+    font-size: 14px;
+  }
+  .cash-over-fees-link3 {
+    font-size: 14px;
+  }
+  .cash-over-fees-row2 {
     gap: var(--dl-space-space-unit);
   }
-  .our-fees-row3 {
+  .cash-over-fees-image {
+    width: 40px;
+    height: 40px;
+  }
+  .cash-over-fees-row3 {
     gap: var(--dl-space-space-unit);
   }
-  .our-fees-row4 {
+  .cash-over-fees-image1 {
+    width: 40px;
+    height: 40px;
+  }
+  .cash-over-fees-row4 {
     gap: var(--dl-space-space-unit);
   }
-  .our-fees-row5 {
+  .cash-over-fees-image2 {
+    width: 40px;
+    height: 40px;
+  }
+  .cash-over-fees-row5 {
     gap: var(--dl-space-space-unit);
+  }
+  .cash-over-fees-image3 {
+    width: 40px;
+    height: 40px;
   }
 }
 @media(max-width: 479px) {
-  .our-fees-text {
+  .cash-over-fees-text {
     font-size: 28px;
   }
-  .our-fees-text01 {
+  .cash-over-fees-text01 {
     font-size: 14px;
     margin-top: var(--dl-space-space-unit);
   }
-  .our-fees-text04 {
+  .cash-over-fees-row {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .cash-over-fees-link3 {
+    font-size: 14px;
+    text-decoration: none;
+  }
+  .cash-over-fees-text04 {
     font-size: 14px;
   }
-  .our-fees-personal {
-    padding-left: var(--dl-space-space-unit);
-    padding-right: var(--dl-space-space-unit);
+  .cash-over-fees-personal {
+    padding-left: 0px;
+    padding-right: 0px;
   }
-  .our-fees-row2 {
+  .cash-over-fees-row2 {
     gap: var(--dl-space-space-halfunit);
   }
-  .our-fees-image {
-    width: 50px;
-    height: 50px;
-  }
-  .our-fees-cash-over {
+  .cash-over-fees-cash-over {
     font-size: 22px;
   }
-  .our-fees-container03 {
+  .cash-over-fees-container03 {
     flex: initial;
     height: 150px;
   }
-  .our-fees-row3 {
+  .cash-over-fees-row3 {
     gap: var(--dl-space-space-halfunit);
   }
-  .our-fees-image1 {
-    width: 50px;
-    height: 50px;
-  }
-  .our-fees-cash-over1 {
+  .cash-over-fees-cash-over1 {
     font-size: 22px;
   }
-  .our-fees-row4 {
+  .cash-over-fees-text09 {
+    margin-left: var(--dl-space-space-unit);
+    margin-right: var(--dl-space-space-unit);
+  }
+  .cash-over-fees-row4 {
     gap: var(--dl-space-space-halfunit);
   }
-  .our-fees-image2 {
-    width: 50px;
-    height: 50px;
-  }
-  .our-fees-cash-over2 {
+  .cash-over-fees-cash-over2 {
     font-size: 22px;
   }
-  .our-fees-row5 {
+  .cash-over-fees-row5 {
     gap: var(--dl-space-space-halfunit);
   }
-  .our-fees-image3 {
-    width: 50px;
-    height: 50px;
-  }
-  .our-fees-cash-over3 {
+  .cash-over-fees-cash-over3 {
     font-size: 22px;
+  }
+  .cash-over-fees-text10 {
+    margin-left: var(--dl-space-space-unit);
+    margin-right: var(--dl-space-space-unit);
   }
 }

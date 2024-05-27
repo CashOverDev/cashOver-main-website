@@ -1,13 +1,13 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 
-import { Helmet } from 'react-helmet'
+import { Helmet } from "react-helmet";
 
-import NavigationBarDark from '../components/navigation-bar-dark'
-import FAQMerchant from '../components/faq-merchant'
-import ContactFormDark from '../components/contact-form-dark'
-import Footer from '../components/footer'
-import './merchant.css'
+import NavigationBarDark from "../components/navigation-bar-dark";
+import FAQMerchant from "../components/faq-merchant";
+import ContactFormDark from "../components/contact-form-dark";
+import Footer from "../components/footer";
+import "./merchant.css";
 
 const Merchant = (props) => {
   return (
@@ -46,16 +46,30 @@ const Merchant = (props) => {
               over Lebanon!
             </h2>
             <div className="merchant-stores">
-              <img
-                alt="image"
-                src="/play-badge.png"
-                className="merchant-image01"
-              />
-              <img
-                alt="image"
-                src="/apple-badge.png"
-                className="merchant-image02"
-              />
+              <a
+                href="https://overlab.io"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="merchant-link"
+              >
+                <img
+                  alt="image"
+                  src="/play-badge.png"
+                  className="merchant-image01"
+                />
+              </a>
+              <a
+                href="https://overlab.io"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="merchant-link1"
+              >
+                <img
+                  alt="image"
+                  src="/apple-badge.png"
+                  className="merchant-image02"
+                />
+              </a>
             </div>
           </div>
           <img
@@ -120,7 +134,7 @@ const Merchant = (props) => {
           <div className="merchant-box4">
             <span className="merchant-text12">Free menu</span>
             <span className="merchant-text13">
-              Create your store menu and edit it anytime.
+              Create your store menu and edit it anytime. Always for Free!
             </span>
           </div>
           <div className="merchant-box5">
@@ -169,9 +183,12 @@ const Merchant = (props) => {
               </span>
               <br></br>
             </span>
-            <button className="merchant-action1 thq-button-filled-dark">
+            <Link
+              to="/Signup"
+              className="merchant-action1 thq-button-filled-dark"
+            >
               Create Menu For Free
-            </button>
+            </Link>
           </div>
         </div>
         <div className="merchant-menu1">
@@ -194,19 +211,19 @@ const Merchant = (props) => {
                 You can also
                 <span
                   dangerouslySetInnerHTML={{
-                    __html: ' ',
+                    __html: " ",
                   }}
                 />
               </span>
-              <Link to="/cash-over-sd-ks" className="merchant-navlink1">
+              <Link to="/cash-over-sdk" className="merchant-navlink1">
                 add CashOver
               </Link>
               <span>
-                {' '}
+                {" "}
                 to your website or app, no more high transfer fees from banks
                 and difficult cash-out procedures. Learn more about fees 
               </span>
-              <Link to="/our-fees" className="merchant-navlink2">
+              <Link to="/cash-over-fees" className="merchant-navlink2">
                 here
               </Link>
               <span className="merchant-text41">.</span>
@@ -217,20 +234,23 @@ const Merchant = (props) => {
               </span>
               <br></br>
             </span>
-            <button className="merchant-action11 thq-button-filled-dark">
+            <Link
+              to="/Signup"
+              className="merchant-action11 thq-button-filled-dark"
+            >
               Get Started
-            </button>
+            </Link>
           </div>
           <img
             alt="image"
-            src="https://images.unsplash.com/photo-1600147131759-880e94a6185f?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDJ8fHFyJTIwY29kZXxlbnwwfHx8fDE3MTYwNjAxNTZ8MA&amp;ixlib=rb-4.0.3&amp;w=500"
+            src="https://images.unsplash.com/photo-1600147131759-880e94a6185f?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDJ8fHFyJTIwY29kZXxlbnwwfHx8fDE3MTYwNjAxNTZ8MA&amp;ixlib=rb-4.0.3&amp;w=1000"
             className="merchant-image07"
           />
         </div>
         <div className="merchant-menu2">
           <img
             alt="image"
-            src="https://images.unsplash.com/photo-1588675646184-f5b0b0b0b2de?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDF8fHdhaXRlcnxlbnwwfHx8fDE3MTYwNzc5MzZ8MA&amp;ixlib=rb-4.0.3&amp;w=500"
+            src="https://images.unsplash.com/photo-1588675646184-f5b0b0b0b2de?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDF8fHdhaXRlcnxlbnwwfHx8fDE3MTYwNzc5MzZ8MA&amp;ixlib=rb-4.0.3&amp;w=1000"
             className="merchant-image08"
           />
           <div className="merchant-container3">
@@ -243,7 +263,7 @@ const Merchant = (props) => {
                 your absence.
                 <span
                   dangerouslySetInnerHTML={{
-                    __html: ' ',
+                    __html: " ",
                   }}
                 />
               </span>
@@ -262,9 +282,12 @@ const Merchant = (props) => {
               <br></br>
               <br></br>
             </span>
-            <button className="merchant-action12 thq-button-filled-dark">
+            <Link
+              to="/Signup"
+              className="merchant-action12 thq-button-filled-dark"
+            >
               Get Started
-            </button>
+            </Link>
           </div>
         </div>
         <div className="merchant-menu3">
@@ -288,12 +311,17 @@ const Merchant = (props) => {
               <span>Receive money like you receive text messages!</span>
               <br></br>
             </span>
-            <button className="merchant-action13 thq-button-filled-dark">
+            <a
+              href={`https://docs.${window.location.host}`}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="merchant-action13 thq-button-filled-dark"
+            >
               View Documentation
-            </button>
+            </a>
           </div>
           <img
-            src="https://images.unsplash.com/photo-1664455340023-214c33a9d0bd?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDcyfHxjYXJ0JTIwb25saW5lfGVufDB8fHx8MTcxNjA4NjM1OHww&amp;ixlib=rb-4.0.3&amp;h=600"
+            src="https://images.unsplash.com/photo-1664455340023-214c33a9d0bd?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDcyfHxjYXJ0JTIwb25saW5lfGVufDB8fHx8MTcxNjA4NjM1OHww&amp;ixlib=rb-4.0.3&amp;w=1000"
             className="merchant-image09"
           />
         </div>
@@ -302,7 +330,7 @@ const Merchant = (props) => {
       <ContactFormDark rootClassName="contact-form-dark-root-class-name1"></ContactFormDark>
       <Footer rootClassName="footer-root-class-name6"></Footer>
     </div>
-  )
-}
+  );
+};
 
-export default Merchant
+export default Merchant;

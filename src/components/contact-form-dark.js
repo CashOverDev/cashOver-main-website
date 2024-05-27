@@ -1,14 +1,69 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
-import PropTypes from 'prop-types'
-
-import './contact-form-dark.css'
+import "./contact-form-dark.css";
 
 const ContactFormDark = (props) => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    topic: "Support",
+    message: "",
+    termsAccepted: false,
+  });
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch(
+        "https://us-central1-cashover-staging.cloudfunctions.net/routes-createContactFormSubmission",
+        {
+          method: "POST",
+          headers: {
+            "api-version": "v1",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            topic: formData.topic,
+            message: formData.message,
+            email: formData.email,
+            phoneNumber: formData.phone,
+            termsAccepted: formData.termsAccepted,
+            websiteVersion: "1.0.0",
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      const data = await response.json();
+      console.log(data); 
+      window.alert('Your message has been received, our team will get back to you within 3 business days!');
+     
+    } catch (error) {
+      console.error("Error:", error);
+      
+    }
+  };
+
   return (
     <main
-      className={`contact-form-dark-contact1 thq-section-padding ${props.rootClassName} `}
+      className={`contact-form-dark-contact1 thq-section-padding ${props.rootClassName}`}
     >
       <div className="contact-form-dark-max-width thq-flex-row thq-section-max-width">
         <div className="contact-form-dark-section-title thq-flex-column">
@@ -75,36 +130,44 @@ const ContactFormDark = (props) => {
             </div>
           </div>
         </div>
-        <form className="contact-form-dark-form thq-flex-column">
+        <form
+          onSubmit={handleSubmit}
+          className="contact-form-dark-form thq-flex-column"
+        >
+          {/* Form inputs */}
           <div className="contact-form-dark-container">
             <div className="contact-form-dark-input">
               <label
-                htmlFor="contact-form-8-first-name"
+                htmlFor="firstName"
                 className="contact-form-dark-text03 thq-body-small"
               >
                 First name
               </label>
               <input
-                type="name"
+                type="text"
                 id="firstName"
                 name="firstName"
-                required="true"
+                value={formData.firstName}
+                onChange={handleChange}
+                required
                 placeholder="Enter your first name"
                 className="contact-form-dark-text-input thq-input-dark"
               />
             </div>
             <div className="contact-form-dark-input1">
               <label
-                htmlFor="contact-form-8-last-name"
+                htmlFor="lastName"
                 className="contact-form-dark-text04 thq-body-small"
               >
                 Last name
               </label>
               <input
-                type="name"
+                type="text"
                 id="lastName"
                 name="lastName"
-                required="true"
+                value={formData.lastName}
+                onChange={handleChange}
+                required
                 placeholder="Enter your last name"
                 className="contact-form-dark-text-input1 thq-input-dark"
               />
@@ -113,7 +176,7 @@ const ContactFormDark = (props) => {
           <div className="contact-form-dark-container1">
             <div className="contact-form-dark-input2">
               <label
-                htmlFor="contact-form-8-email"
+                htmlFor="email"
                 className="contact-form-dark-text05 thq-body-small"
               >
                 Email
@@ -122,14 +185,16 @@ const ContactFormDark = (props) => {
                 type="email"
                 id="email"
                 name="email"
-                required="true"
+                value={formData.email}
+                onChange={handleChange}
+                required
                 placeholder="Enter your email"
                 className="contact-form-dark-text-input2 thq-input-dark"
               />
             </div>
             <div className="contact-form-dark-input3">
               <label
-                htmlFor="contact-form-8-phone"
+                htmlFor="phone"
                 className="contact-form-dark-text06 thq-body-small"
               >
                 Phone Number
@@ -138,7 +203,9 @@ const ContactFormDark = (props) => {
                 type="tel"
                 id="phone"
                 name="phone"
-                required="true"
+                value={formData.phone}
+                onChange={handleChange}
+                required
                 placeholder="Enter your phone number"
                 className="contact-form-dark-text-input3 thq-input-dark"
               />
@@ -147,7 +214,7 @@ const ContactFormDark = (props) => {
           <div className="contact-form-dark-container2">
             <div className="contact-form-dark-input4">
               <label
-                htmlFor="contact-form-8-options"
+                htmlFor="topic"
                 className="contact-form-dark-text07 thq-body-small"
               >
                 Choose one topic
@@ -155,35 +222,24 @@ const ContactFormDark = (props) => {
               <select
                 id="topic"
                 name="topic"
-                required="true"
-                placeholder="Select one"
+                value={formData.topic}
+                onChange={handleChange}
+                required
                 className="thq-select-dark"
               >
-                <option value="Support" className="">
-                  Support
-                </option>
-                <option value="ATMs" className="">
-                  ATMs
-                </option>
-                <option value="Agent" className="">
-                  Agent
-                </option>
-                <option value="Career" className="">
-                  Career
-                </option>
-                <option value="Merchant" className="">
-                  Merchant
-                </option>
-                <option value="Business" className="">
-                  Business
-                </option>
+                <option value="Support">Support</option>
+                <option value="ATMs">ATMs</option>
+                <option value="Agent">Agent</option>
+                <option value="Career">Career</option>
+                <option value="Merchant">Merchant</option>
+                <option value="Business">Business</option>
               </select>
             </div>
           </div>
           <div className="contact-form-dark-container3">
             <div className="contact-form-dark-input5">
               <label
-                htmlFor="contact-form-8-options"
+                htmlFor="message"
                 className="contact-form-dark-text08 thq-body-small"
               >
                 Message
@@ -191,6 +247,8 @@ const ContactFormDark = (props) => {
               <textarea
                 id="message"
                 name="message"
+                value={formData.message}
+                onChange={handleChange}
                 rows="3"
                 placeholder="Explain your request"
                 className="contact-form-dark-textarea thq-input-dark"
@@ -200,21 +258,22 @@ const ContactFormDark = (props) => {
           <div className="contact-form-dark-checkbox">
             <input
               type="checkbox"
-              id="contact-form-8-check"
-              required="true"
+              id="termsAccepted"
+              name="termsAccepted"
+              checked={formData.termsAccepted}
+              onChange={handleChange}
+              required
               className="thq-checkbox"
             />
             <label
-              htmlFor="contact-form-8-check"
+              htmlFor="termsAccepted"
               className="contact-form-dark-text09 thq-body-small"
             >
               I accept the Terms
             </label>
           </div>
           <button
-            id="submit"
             type="submit"
-            Action
             className="contact-form-dark-button thq-button-filled-dark"
           >
             <span className="thq-body-small">{props.action}</span>
@@ -222,21 +281,21 @@ const ContactFormDark = (props) => {
         </form>
       </div>
     </main>
-  )
-}
+  );
+};
 
 ContactFormDark.defaultProps = {
-  address: 'Lebanon, Tripoli, Ashir Dayeh Street',
-  rootClassName: '',
-  logoAlt: 'image',
-  action: 'SUBMIT',
-  logoSrc: '/cashover-1500h.png',
-  content1: 'Our team will get back to you within 24 hrs',
-  phone: '+961 81 350 616',
-  heading: 'CONTACT US',
-  email: 'support@cashover.money',
-  content2: 'Get in touch with us today!',
-}
+  address: "Lebanon, Tripoli, Ashir Dayeh Street",
+  rootClassName: "",
+  logoAlt: "image",
+  action: "SUBMIT",
+  logoSrc: "/cashover-1500h.png",
+  content1: "Our team will get back to you within 3 business days",
+  phone: "+961 81 350 616",
+  heading: "CONTACT US",
+  email: "support@cashover.money",
+  content2: "Get in touch with us today!",
+};
 
 ContactFormDark.propTypes = {
   address: PropTypes.string,
@@ -249,6 +308,6 @@ ContactFormDark.propTypes = {
   heading: PropTypes.string,
   email: PropTypes.string,
   content2: PropTypes.string,
-}
+};
 
-export default ContactFormDark
+export default ContactFormDark;

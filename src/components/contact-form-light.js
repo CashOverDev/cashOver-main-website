@@ -1,10 +1,65 @@
-import React from 'react'
+import React, { useState } from "react";
+import PropTypes from "prop-types";
 
-import PropTypes from 'prop-types'
-
-import './contact-form-light.css'
+import "./contact-form-light.css";
 
 const ContactFormLight = (props) => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    topic: "Support", // Default topic
+    message: "",
+    termsAccepted: false,
+  });
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch(
+        "https://us-central1-cashover-staging.cloudfunctions.net/routes-createContactFormSubmission",
+        {
+          method: "POST",
+          headers: {
+            "api-version": "v1",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            topic: formData.topic,
+            message: formData.message,
+            email: formData.email,
+            phoneNumber: formData.phone,
+            termsAccepted: formData.termsAccepted,
+            websiteVersion: "1.0.0",
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      const data = await response.json();
+      console.log(data);
+      window.alert(
+        "Your message has been received, our team will get back to you within 3 business days!"
+      );
+    } catch (error) {
+      console.error("Error:", error);
+      window.alert("Failed to send message");
+    }
+  };
+
   return (
     <main
       id="contactForm"
@@ -21,31 +76,77 @@ const ContactFormLight = (props) => {
           </div>
         </div>
         <div className="contact-form-light-content1">
-          <form className="contact-form-light-form thq-card">
-            <div className="contact-form-light-input">
-              <label htmlFor="contact-form-9-name" className="thq-body-small">
-                Name
-              </label>
-              <input
-                type="text"
-                id="contact-form-9-name"
-                required="true"
-                className="contact-form-light-text-input thq-input"
-              />
-            </div>
-            <div className="contact-form-light-input1">
-              <label htmlFor="contact-form-9-email" className="thq-body-small">
-                Email
-              </label>
-              <input
-                type="text"
-                id="contact-form-9-email"
-                required="true"
-                className="thq-input"
-              />
+          <form
+            className="contact-form-light-form thq-card"
+            onSubmit={handleSubmit}
+          >
+            <div className="contact-form-light-container">
+              <div className="contact-form-light-input">
+                <label htmlFor="contact-form-9-name" className="thq-body-small">
+                  First Name
+                </label>
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  required="true"
+                  className="contact-form-light-text-input thq-input"
+                  placeholder="Enter your first name"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="contact-form-light-input1">
+                <label htmlFor="contact-form-9-name" className="thq-body-small">
+                  Last Name
+                </label>
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  required="true"
+                  className="contact-form-light-text-input1 thq-input"
+                  placeholder="Enter your last name"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                />
+              </div>
             </div>
             <div className="contact-form-light-container">
               <div className="contact-form-light-input2">
+                <label htmlFor="email" className="thq-body-small">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  className="thq-input"
+                  placeholder="Enter your email"
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="contact-form-light-input2">
+                <label htmlFor="phone" className="thq-body-small">
+                  Phone Number
+                </label>
+                <input
+                  type="phone"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                  className="contact-form-light-text-input1 thq-input"
+                  placeholder="Enter your phone number"
+                />
+              </div>
+            </div>
+
+            <div className="contact-form-light-container1">
+              <div className="contact-form-light-input3">
                 <label
                   htmlFor="contact-form-9-options"
                   className="thq-body-small"
@@ -53,9 +154,12 @@ const ContactFormLight = (props) => {
                   Choose your topic
                 </label>
                 <select
-                  id="contact-form-9-options"
-                  placeholder="Select one"
+                  id="topic"
                   className="thq-select"
+                  name="topic"
+                  value={formData.topic}
+                  onChange={handleChange}
+                  required
                 >
                   <option value="Support" className="">
                     Support
@@ -78,7 +182,7 @@ const ContactFormLight = (props) => {
                 </select>
               </div>
             </div>
-            <div className="contact-form-light-input3">
+            <div className="contact-form-light-input4">
               <label
                 htmlFor="contact-form-9-message"
                 className="thq-body-small"
@@ -86,16 +190,23 @@ const ContactFormLight = (props) => {
                 Message
               </label>
               <textarea
-                id="contact-form-9-message"
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
                 rows="3"
-                className="thq-input"
+                placeholder="Explain your request"
+                className="contact-form-light-textarea thq-input"
               ></textarea>
             </div>
             <div className="contact-form-light-checkbox">
               <input
                 type="checkbox"
-                id="contact-form-9-check"
-                required="true"
+                id="termsAccepted"
+                name="termsAccepted"
+                checked={formData.termsAccepted}
+                onChange={handleChange}
+                required
                 className="thq-checkbox"
               />
               <label htmlFor="contact-form-9-check" className="thq-body-small">
@@ -122,7 +233,7 @@ const ContactFormLight = (props) => {
                   ></path>
                 </svg>
                 <div className="contact-form-light-contact-info">
-                  <h3 className="contact-form-light-text08 thq-heading-3">
+                  <h3 className="contact-form-light-text09 thq-heading-3">
                     Email
                   </h3>
                   <a
@@ -144,7 +255,7 @@ const ContactFormLight = (props) => {
                   ></path>
                 </svg>
                 <div className="contact-form-light-contact-info1">
-                  <h3 className="contact-form-light-text09 thq-heading-3">
+                  <h3 className="contact-form-light-text10 thq-heading-3">
                     Phone
                   </h3>
                   <a
@@ -172,7 +283,7 @@ const ContactFormLight = (props) => {
                   ></path>
                 </svg>
                 <div className="contact-form-light-contact-info2">
-                  <h3 className="contact-form-light-text10 thq-heading-3">
+                  <h3 className="contact-form-light-text11 thq-heading-3">
                     Office
                   </h3>
                   <span className="thq-body-small">{props.address}</span>
@@ -188,23 +299,23 @@ const ContactFormLight = (props) => {
         </div>
       </div>
     </main>
-  )
-}
+  );
+};
 
 ContactFormLight.defaultProps = {
-  content2: 'Get in touch with us today!',
-  address: 'Lebanon, Tripoli, Ashir Dayeh Street',
-  imageAlt1: 'image',
-  phone: '+961 81 350 616',
-  content1: 'Our team will get back to you within 24 hrs',
-  imageSrc: 'cbe1a1f7-849f-4747-a82a-71fc226cdd4e',
-  heading1: 'REACH OUT TO US',
-  imageAlt: 'image',
-  email: 'support@cashover.money',
-  rootClassName: '',
-  imageSrc1: '/cashover-200w.png',
-  action: 'SUBMIT',
-}
+  content2: "Get in touch with us today!",
+  address: "Lebanon, Tripoli, Ashir Dayeh Street",
+  imageAlt1: "image",
+  phone: "+961 81 350 616",
+  content1: "Our team will get back to you within 3 business days",
+  imageSrc: "cbe1a1f7-849f-4747-a82a-71fc226cdd4e",
+  heading1: "REACH OUT TO US",
+  imageAlt: "image",
+  email: "support@cashover.money",
+  rootClassName: "",
+  imageSrc1: "/cashover-200w.png",
+  action: "SUBMIT",
+};
 
 ContactFormLight.propTypes = {
   content2: PropTypes.string,
@@ -219,6 +330,6 @@ ContactFormLight.propTypes = {
   rootClassName: PropTypes.string,
   imageSrc1: PropTypes.string,
   action: PropTypes.string,
-}
+};
 
-export default ContactFormLight
+export default ContactFormLight;

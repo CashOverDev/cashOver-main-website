@@ -3,7 +3,13 @@
   display: flex;
   overflow: hidden;
   position: relative;
+  border-color: var(--dl-color-gray-black);
+  border-width: 1px;
   flex-direction: column;
+  border-top-width: 1px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
 }
 .contact-form-light-max-width {
   display: flex;
@@ -38,8 +44,18 @@
   flex-shrink: 0;
   flex-direction: column;
 }
+.contact-form-light-container {
+  gap: var(--dl-space-space-unit);
+  flex: 0 0 auto;
+  height: 100px;
+  display: flex;
+  align-self: stretch;
+  align-items: center;
+  justify-content: center;
+}
 .contact-form-light-input {
   gap: var(--dl-space-space-halfunit);
+  flex: 1;
   display: flex;
   align-self: stretch;
   align-items: flex-start;
@@ -50,17 +66,14 @@
 }
 .contact-form-light-input1 {
   gap: var(--dl-space-space-halfunit);
+  flex: 1;
   display: flex;
   align-self: stretch;
   align-items: flex-start;
   flex-direction: column;
 }
-.contact-form-light-container {
-  flex: 0 0 auto;
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
+.contact-form-light-text-input1 {
+  align-self: stretch;
 }
 .contact-form-light-input2 {
   gap: var(--dl-space-space-halfunit);
@@ -68,14 +81,32 @@
   align-self: stretch;
   align-items: flex-start;
   flex-direction: column;
+  width: 100%;
+}
+.contact-form-light-container1 {
+  flex: 0 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 }
 .contact-form-light-input3 {
+  gap: var(--dl-space-space-halfunit);
+  display: flex;
+  align-self: stretch;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.contact-form-light-input4 {
   gap: var(--dl-space-space-halfunit);
   width: 100%;
   display: flex;
   align-self: stretch;
   align-items: stretch;
   flex-direction: column;
+}
+.contact-form-light-textarea {
+  max-width: 700px;
 }
 .contact-form-light-checkbox {
   gap: var(--dl-space-space-unit);
@@ -96,8 +127,8 @@
   flex: 1;
 }
 .contact-form-light-icon {
-  width: 32;
-  height: 32;
+  width: 32px;
+  height: 32px;
 }
 .contact-form-light-contact-info {
   gap: var(--dl-space-space-halfunit);
@@ -106,7 +137,7 @@
   align-items: flex-start;
   flex-direction: column;
 }
-.contact-form-light-text08 {
+.contact-form-light-text09 {
   font-family: "Raleway";
 }
 .contact-form-light-email {
@@ -116,8 +147,8 @@
   flex: 1;
 }
 .contact-form-light-icon2 {
-  width: 32;
-  height: 32;
+  width: 32px;
+  height: 32px;
 }
 .contact-form-light-contact-info1 {
   gap: var(--dl-space-space-halfunit);
@@ -126,7 +157,7 @@
   align-items: flex-start;
   flex-direction: column;
 }
-.contact-form-light-text09 {
+.contact-form-light-text10 {
   font-family: "Raleway";
 }
 .contact-form-light-phone {
@@ -140,8 +171,8 @@
   flex: 1;
 }
 .contact-form-light-icon4 {
-  width: 32;
-  height: 32;
+  width: 32px;
+  height: 32px;
 }
 .contact-form-light-contact-info2 {
   gap: var(--dl-space-space-halfunit);
@@ -150,7 +181,7 @@
   align-items: flex-start;
   flex-direction: column;
 }
-.contact-form-light-text10 {
+.contact-form-light-text11 {
   font-family: "Raleway";
 }
 .contact-form-light-image {
@@ -159,16 +190,32 @@
 }
 
 
+@media(max-width: 1600px) {
+  .contact-form-light-container {
+    gap: var(--dl-space-space-unit);
+    height: auto;
+  }
+  .contact-form-light-input {
+    flex: 1;
+  }
+  .contact-form-light-input1 {
+    flex: 1;
+  }
+}
 @media(max-width: 991px) {
   .contact-form-light-form {
     width: 50%;
   }
   .contact-form-light-container {
+    gap: var(--dl-space-space-oneandhalfunits);
+    flex-direction: column;
+  }
+  .contact-form-light-container1 {
     gap: var(--dl-space-space-twounits);
     width: 100%;
     flex-direction: row;
   }
-  .contact-form-light-input2 {
+  .contact-form-light-input3 {
     gap: var(--dl-space-space-halfunit);
     width: 100%;
     flex-direction: column;
@@ -191,7 +238,10 @@
   }
 }
 @media(max-width: 767px) {
-  .contact-form-light-input2 {
+  .contact-form-light-text01 {
+    font-size: 28px;
+  }
+  .contact-form-light-input3 {
     width: 100%;
   }
   .contact-form-light-row1 {
@@ -199,13 +249,16 @@
   }
 }
 @media(max-width: 479px) {
+  .contact-form-light-text01 {
+    font-size: 26px;
+  }
   .contact-form-light-content1 {
     flex-direction: column;
   }
   .contact-form-light-form {
     width: 100%;
   }
-  .contact-form-light-input2 {
+  .contact-form-light-input3 {
     width: 100%;
   }
   .contact-form-light-content2 {

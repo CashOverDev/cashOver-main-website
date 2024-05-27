@@ -51,22 +51,24 @@ const Footer = (props) => {
               <Link to="/" className="footer-navlink">
                 {props.text3}
               </Link>
-              <Link to="/agent-atm-hosting" className="footer-navlink1">
+              <Link to="/work-with-us" className="footer-navlink1">
                 {props.text4}
               </Link>
-              <span className="footer-text03">{props.text5}</span>
-              <Link to="/our-fees" className="footer-navlink2">
+              <Link to="/business" className="footer-navlink2">
+                {props.text5}
+              </Link>
+              <Link to="/cash-over-fees" className="footer-navlink3">
                 {props.text19}
               </Link>
-              <Link to="/support" className="footer-navlink3">
+              <Link to="/support" className="footer-navlink4">
                 {props.text6}
               </Link>
-              <Link to="/faq" className="footer-navlink4">
+              <Link to="/faq" className="footer-navlink5">
                 {props.text7}
               </Link>
             </div>
             <div className="footer-company-container">
-              <h4 className="footer-text04">{props.text8}</h4>
+              <h4 className="footer-text03">{props.text8}</h4>
               <a
                 href="https://overlab.io"
                 target="_blank"
@@ -83,31 +85,31 @@ const Footer = (props) => {
               >
                 {props.text10}
               </a>
-              <Link to="/support" className="footer-navlink5">
+              <Link to="/support" className="footer-navlink6">
                 {props.text11}
               </Link>
-              <Link to="/blog" className="footer-navlink6">
+              <Link to="/blog" className="footer-navlink7">
                 {props.text12}
               </Link>
-              <Link to="/terms-of-service" className="footer-navlink7">
+              <Link to="/terms-of-service" className="footer-navlink8">
                 {props.text13}
               </Link>
             </div>
             <div className="footer-location-container">
-              <h4 className="footer-text05">Visit Us</h4>
-              <span className="footer-text06">
+              <h4 className="footer-text04">Visit Us</h4>
+              <span className="footer-text05">
                 <span className="">Lebanon, </span>
                 <span className="">Tripoli</span>
                 <br className=""></br>
                 <span className="">Ashir Dayeh Street</span>
                 <br className=""></br>
               </span>
-              <span className="footer-text12">8:00 AM - 2:00 PM</span>
-              <span className="footer-text13">Monday to Saturday</span>
+              <span className="footer-text11">8:00 AM - 2:00 PM</span>
+              <span className="footer-text12">Monday to Saturday</span>
             </div>
             <div className="footer-contact-container">
               <div className="footer-contact">
-                <h4 className="footer-text14">{props.text14}</h4>
+                <h4 className="footer-text13">{props.text14}</h4>
                 <a
                   href="mailto:contactus@overlab.io?subject=CashOver Contact Form"
                   className="footer-link04"
@@ -124,7 +126,7 @@ const Footer = (props) => {
                 </a>
               </div>
               <div className="footer-socials">
-                <h4 className="footer-text19">{props.text16}</h4>
+                <h4 className="footer-text18">{props.text16}</h4>
                 <div className="footer-icon-group">
                   <a
                     href="https://x.com"

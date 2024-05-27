@@ -29,10 +29,10 @@ const Signup = (props) => {
       </Helmet>
       <div className="signup-bar">
         <Link to="/" className="signup-navlink">
-          <img alt="CashOver Logo" src="/cashover%20banner%20dark.png" />
+          <img className='signup-image1' alt="CashOver Logo" src="/cashover%20banner%20dark.png" />
         </Link>
         <a
-          href="https://agent.cashover.money"
+          href={`https://agent.${window.location.host}`}
           target="_blank"
           rel="noreferrer noopener"
           className="signup-action2 thq-button-outline-dark"
@@ -46,7 +46,7 @@ const Signup = (props) => {
       <div className="signup-container1">
         <div className="signup-choices">
           <a
-            href="https://merchant.cashover.money"
+           href={`https://merchant.${window.location.host}`}
             target="_blank"
             rel="noreferrer noopener"
             className="signup-link"
@@ -55,7 +55,7 @@ const Signup = (props) => {
           </a>
           <label className="signup-text2">PERSONAL</label>
           <a
-            href="https://business.cashover.money"
+          href={`https://business.${window.location.host}`}
             target="_blank"
             rel="noreferrer noopener"
             className="signup-link1"
@@ -80,7 +80,7 @@ const Signup = (props) => {
             alt="image"
             src="/cashover-qr-code.png"
             loading="eager"
-            className="signup-image1 signup-image1"
+            className="signup-image-qr-code"
           />
           <div className="signup-row">
             <div className="signup-divider"></div>

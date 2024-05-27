@@ -6,6 +6,7 @@ import NavigationBarGeneral from '../components/navigation-bar-general'
 import FAQPersonal from '../components/faq-personal'
 import FAQMerchant from '../components/faq-merchant'
 import FAQBusiness from '../components/faq-business'
+import FAQWorkWithUs from '../components/faq-work-with-us'
 import ContactFormDark from '../components/contact-form-dark'
 import Footer from '../components/footer'
 import './faq.css'
@@ -52,6 +53,8 @@ const FAQ = (props) => {
         <FAQMerchant rootClassName="faq-merchant-root-class-name1"></FAQMerchant>
         <h2 className="faq-text4">CashOver BUSINESS Account</h2>
         <FAQBusiness rootClassName="faq-business-root-class-name2"></FAQBusiness>
+        <h2 className="faq-text5">CashOver AGENT PARTNER</h2>
+        <FAQWorkWithUs rootClassName="faq-work-with-us-root-class-name1"></FAQWorkWithUs>
       </div>
       <ContactFormDark rootClassName="contact-form-dark-root-class-name3"></ContactFormDark>
       <Footer rootClassName="footer-root-class-name"></Footer>
