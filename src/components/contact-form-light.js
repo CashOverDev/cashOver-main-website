@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-
+import packageJson from '../../package.json';
 import "./contact-form-light.css";
 
 const ContactFormLight = (props) => {
@@ -40,7 +40,7 @@ const ContactFormLight = (props) => {
             email: formData.email,
             phoneNumber: formData.phone,
             termsAccepted: formData.termsAccepted,
-            websiteVersion: "1.0.0",
+            websiteVersion: packageJson.version,
           }),
         }
       );
@@ -67,7 +67,8 @@ const ContactFormLight = (props) => {
     >
       <div className="contact-form-light-max-width thq-section-max-width">
         <div className="contact-form-light-section-title thq-card">
-          <span className="thq-body-small">{props.content2}</span>
+          <span 
+          className="thq-body-small">{props.content2}</span>
           <div className="contact-form-light-content">
             <h2 className="contact-form-light-text01 thq-heading-2">
               {props.heading1}
@@ -89,7 +90,7 @@ const ContactFormLight = (props) => {
                   type="text"
                   id="firstName"
                   name="firstName"
-                  required="true"
+                  required={true}
                   className="contact-form-light-text-input thq-input"
                   placeholder="Enter your first name"
                   value={formData.firstName}
@@ -104,7 +105,7 @@ const ContactFormLight = (props) => {
                   type="text"
                   id="lastName"
                   name="lastName"
-                  required="true"
+                  required={true}
                   className="contact-form-light-text-input1 thq-input"
                   placeholder="Enter your last name"
                   value={formData.lastName}
@@ -121,7 +122,7 @@ const ContactFormLight = (props) => {
                   type="email"
                   id="email"
                   name="email"
-                  required
+                  required={true}
                   className="thq-input"
                   placeholder="Enter your email"
                   value={formData.email}
@@ -138,7 +139,7 @@ const ContactFormLight = (props) => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  required
+                  required={true}
                   className="contact-form-light-text-input1 thq-input"
                   placeholder="Enter your phone number"
                 />
@@ -159,7 +160,7 @@ const ContactFormLight = (props) => {
                   name="topic"
                   value={formData.topic}
                   onChange={handleChange}
-                  required
+                  required={true}
                 >
                   <option value="Support" className="">
                     Support
@@ -206,7 +207,7 @@ const ContactFormLight = (props) => {
                 name="termsAccepted"
                 checked={formData.termsAccepted}
                 onChange={handleChange}
-                required
+                required={true}
                 className="thq-checkbox"
               />
               <label htmlFor="contact-form-9-check" className="thq-body-small">

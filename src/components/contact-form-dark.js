@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-
+import packageJson from '../../package.json';
 import "./contact-form-dark.css";
 
 const ContactFormDark = (props) => {
@@ -42,7 +42,7 @@ const ContactFormDark = (props) => {
             email: formData.email,
             phoneNumber: formData.phone,
             termsAccepted: formData.termsAccepted,
-            websiteVersion: "1.0.0",
+            websiteVersion: packageJson.version,
           }),
         }
       );
@@ -149,7 +149,7 @@ const ContactFormDark = (props) => {
                 name="firstName"
                 value={formData.firstName}
                 onChange={handleChange}
-                required
+                required={true}
                 placeholder="Enter your first name"
                 className="contact-form-dark-text-input thq-input-dark"
               />
@@ -167,7 +167,7 @@ const ContactFormDark = (props) => {
                 name="lastName"
                 value={formData.lastName}
                 onChange={handleChange}
-                required
+                required={true}
                 placeholder="Enter your last name"
                 className="contact-form-dark-text-input1 thq-input-dark"
               />
@@ -187,7 +187,7 @@ const ContactFormDark = (props) => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                required
+                required={true}
                 placeholder="Enter your email"
                 className="contact-form-dark-text-input2 thq-input-dark"
               />
@@ -205,7 +205,7 @@ const ContactFormDark = (props) => {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                required
+                required={true}
                 placeholder="Enter your phone number"
                 className="contact-form-dark-text-input3 thq-input-dark"
               />
@@ -224,7 +224,7 @@ const ContactFormDark = (props) => {
                 name="topic"
                 value={formData.topic}
                 onChange={handleChange}
-                required
+                required={true}
                 className="thq-select-dark"
               >
                 <option value="Support">Support</option>
@@ -262,7 +262,7 @@ const ContactFormDark = (props) => {
               name="termsAccepted"
               checked={formData.termsAccepted}
               onChange={handleChange}
-              required
+               required={true}
               className="thq-checkbox"
             />
             <label
