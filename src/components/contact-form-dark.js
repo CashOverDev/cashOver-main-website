@@ -14,7 +14,7 @@ const ContactFormDark = (props) => {
     message: "",
     termsAccepted: false,
   });
-
+  const [formLoading, setFormLoading] = useState(false);
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData((prevState) => ({
@@ -24,6 +24,7 @@ const ContactFormDark = (props) => {
   };
 
   const handleSubmit = async (e) => {
+    setFormLoading(true);
     e.preventDefault();
     try {
       const response = await fetch(
@@ -52,13 +53,14 @@ const ContactFormDark = (props) => {
       }
 
       const data = await response.json();
-      console.log(data); 
-      window.alert('Your message has been received, our team will get back to you within 3 business days!');
-     
+      window.alert(
+        "Your message has been received, our team will get back to you within 3 business days!"
+      );
     } catch (error) {
       console.error("Error:", error);
-      
+      window.alert("Failed to send message");
     }
+    setFormLoading(false);
   };
 
   return (
@@ -276,7 +278,11 @@ const ContactFormDark = (props) => {
             type="submit"
             className="contact-form-dark-button thq-button-filled-dark"
           >
-            <span className="thq-body-small">{props.action}</span>
+            {formLoading ? (
+              <div className="loadingIndicator"></div>
+            ) : (
+              <span className="thq-body-small">{props.action}</span>
+            )}
           </button>
         </form>
       </div>
