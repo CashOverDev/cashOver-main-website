@@ -2,10 +2,10 @@
 # https://github.com/firebase/firebase-tools
 
 name: Deploy to Firebase Hosting on merge
-"on":
-  push:
-    branches:
-      - main
+on:
+  release:
+    types: [created]
+
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
@@ -21,9 +21,16 @@ jobs:
         working-directory: ./
         run: npm run build
 
+      - name: Create env file
+        working-directory: ./
+        uses: SpicyPizza/create-envfile@v2.0
+        with:
+          envkey_REACT_APP_API_BASE_URL: ${{ vars.REACT_APP_PRODUCTION_API_BASE_URL }}
+          file_name: .env
+
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_CASHOVER_STAGING }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_CASHOVER_PRODUCTION }}"
           channelId: live
-          projectId: cashover-staging
+          projectId: cashover-production

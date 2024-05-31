@@ -4,16 +4,21 @@
   "private": true,
   "dependencies": {
     "@craco/craco": "^7.0.0-alpha.0",
+    "craco-plugin-env": "^1.0.5",
+    "dangerous-html": "0.1.13",
+    "prop-types": "15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-router-dom": "^5.2.0",
     "react-helmet": "^6.1.0",
-    "dangerous-html": "0.1.13",
-    "prop-types": "15.7.2"
+    "react-router-dom": "^5.2.0"
   },
   "scripts": {
     "start": "craco start",
+    "start:staging": "craco start --mode staging",
+    "start:dev": "craco start --mode development",
     "build": "craco build",
+    "build:dev": "craco build --mode development",
+    "build:staging": "craco build --mode staging",
     "test": "craco test --env=jsdom",
     "eject": "craco eject"
   },

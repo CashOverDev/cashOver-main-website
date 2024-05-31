@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import packageJson from '../../package.json';
+import packageJson from "../../package.json";
 import "./contact-form-dark.css";
 
 const ContactFormDark = (props) => {
@@ -27,26 +27,24 @@ const ContactFormDark = (props) => {
     setFormLoading(true);
     e.preventDefault();
     try {
-      const response = await fetch(
-        "https://us-central1-cashover-staging.cloudfunctions.net/routes-createContactFormSubmission",
-        {
-          method: "POST",
-          headers: {
-            "api-version": "v1",
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            firstName: formData.firstName,
-            lastName: formData.lastName,
-            topic: formData.topic,
-            message: formData.message,
-            email: formData.email,
-            phoneNumber: formData.phone,
-            termsAccepted: formData.termsAccepted,
-            websiteVersion: packageJson.version,
-          }),
-        }
-      );
+      const baseUrl = process.env.REACT_APP_API_BASE_URL;
+      const response = await fetch(`${baseUrl}/createContactFormSubmission`, {
+        method: "POST",
+        headers: {
+          "api-version": "v1",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          topic: formData.topic,
+          message: formData.message,
+          email: formData.email,
+          phoneNumber: formData.phone,
+          termsAccepted: formData.termsAccepted,
+          websiteVersion: packageJson.version,
+        }),
+      });
 
       if (!response.ok) {
         throw new Error("Network response was not ok");
@@ -264,7 +262,7 @@ const ContactFormDark = (props) => {
               name="termsAccepted"
               checked={formData.termsAccepted}
               onChange={handleChange}
-               required={true}
+              required={true}
               className="thq-checkbox"
             />
             <label
