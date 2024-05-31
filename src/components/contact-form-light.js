@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import packageJson from '../../package.json';
+import packageJson from "../../package.json";
 import "./contact-form-light.css";
 
 const ContactFormLight = (props) => {
@@ -25,26 +25,24 @@ const ContactFormLight = (props) => {
     setFormLoading(true);
     e.preventDefault();
     try {
-      const response = await fetch(
-        "https://us-central1-cashover-staging.cloudfunctions.net/routes-createContactFormSubmission",
-        {
-          method: "POST",
-          headers: {
-            "api-version": "v1",
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            firstName: formData.firstName,
-            lastName: formData.lastName,
-            topic: formData.topic,
-            message: formData.message,
-            email: formData.email,
-            phoneNumber: formData.phone,
-            termsAccepted: formData.termsAccepted,
-            websiteVersion: packageJson.version,
-          }),
-        }
-      );
+      const baseUrl = process.env.REACT_APP_API_BASE_URL;
+      const response = await fetch(`${baseUrl}/createContactFormSubmission`, {
+        method: "POST",
+        headers: {
+          "api-version": "v1",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          topic: formData.topic,
+          message: formData.message,
+          email: formData.email,
+          phoneNumber: formData.phone,
+          termsAccepted: formData.termsAccepted,
+          websiteVersion: packageJson.version,
+        }),
+      });
 
       if (!response.ok) {
         throw new Error("Network response was not ok");
@@ -68,8 +66,7 @@ const ContactFormLight = (props) => {
     >
       <div className="contact-form-light-max-width thq-section-max-width">
         <div className="contact-form-light-section-title thq-card">
-          <span 
-          className="thq-body-small">{props.content2}</span>
+          <span className="thq-body-small">{props.content2}</span>
           <div className="contact-form-light-content">
             <h2 className="contact-form-light-text01 thq-heading-2">
               {props.heading1}
