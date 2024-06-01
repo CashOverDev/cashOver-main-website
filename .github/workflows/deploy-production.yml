@@ -17,12 +17,7 @@ jobs:
         working-directory: ./
         run: npm i
 
-      - name: Build project
-        working-directory: ./
-        run: npm run build
-
       - name: Create env file
-        working-directory: ./
         uses: SpicyPizza/create-envfile@v2.0
         with:
           envkey_REACT_APP_API_BASE_URL: ${{ vars.REACT_APP_PRODUCTION_API_BASE_URL }}
@@ -30,6 +25,10 @@ jobs:
           envkey_REACT_APP_MERCHANT_URL: ${{ vars.REACT_APP_PRODUCTION_MERCHANT_URL }}
           envkey_REACT_APP_DOCS_URL: ${{ vars.REACT_APP_PRODUCTION_DOCS_URL }}
           file_name: .env
+
+      - name: Build project
+        working-directory: ./
+        run: npm run build
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
