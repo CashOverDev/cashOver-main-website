@@ -1,11 +1,13 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 
-import { Helmet } from 'react-helmet'
+import { Helmet } from "react-helmet";
 
-import './signup.css'
+import "./signup.css";
 
 const Signup = (props) => {
+  const businessUrl = process.env.REACT_APP_BUSINESS_URL;
+  const merchantUrl = process.env.REACT_APP_MERCHANT_URL;
   return (
     <div className="signup-container">
       <Helmet>
@@ -29,10 +31,14 @@ const Signup = (props) => {
       </Helmet>
       <div className="signup-bar">
         <Link to="/" className="signup-navlink">
-          <img className='signup-image1' alt="CashOver Logo" src="/cashover%20banner%20dark.png" />
+          <img
+            className="signup-image1"
+            alt="CashOver Logo"
+            src="/cashover%20banner%20dark.png"
+          />
         </Link>
-        <a
-          href={`https://agent.${window.location.host}`}
+        {/* <a
+          href=""
           target="_blank"
           rel="noreferrer noopener"
           className="signup-action2 thq-button-outline-dark"
@@ -41,12 +47,12 @@ const Signup = (props) => {
           <svg viewBox="0 0 1024 1024" className="signup-icon">
             <path d="M298.667 341.333h323.669l-353.835 353.835c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l353.835-353.835v323.669c0 23.552 19.115 42.667 42.667 42.667s42.667-19.115 42.667-42.667v-426.667c0-5.803-1.152-11.307-3.243-16.341s-5.163-9.728-9.216-13.781c-0.043-0.043-0.043-0.043-0.085-0.085-3.925-3.925-8.619-7.083-13.781-9.216-5.035-2.091-10.539-3.243-16.341-3.243h-426.667c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"></path>
           </svg>
-        </a>
+        </a> */}
       </div>
       <div className="signup-container1">
         <div className="signup-choices">
           <a
-           href={`https://merchant.${window.location.host}`}
+            href={merchantUrl}
             target="_blank"
             rel="noreferrer noopener"
             className="signup-link"
@@ -55,7 +61,7 @@ const Signup = (props) => {
           </a>
           <label className="signup-text2">PERSONAL</label>
           <a
-          href={`https://business.${window.location.host}`}
+            href={businessUrl}
             target="_blank"
             rel="noreferrer noopener"
             className="signup-link1"
@@ -116,7 +122,7 @@ const Signup = (props) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Signup
+export default Signup;

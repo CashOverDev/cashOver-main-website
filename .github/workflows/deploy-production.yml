@@ -26,6 +26,9 @@ jobs:
         uses: SpicyPizza/create-envfile@v2.0
         with:
           envkey_REACT_APP_API_BASE_URL: ${{ vars.REACT_APP_PRODUCTION_API_BASE_URL }}
+          envkey_REACT_APP_BUSINESS_URL: ${{ vars.REACT_APP_PRODUCTION_BUSINESS_URL }}
+          envkey_REACT_APP_MERCHANT_URL: ${{ vars.REACT_APP_PRODUCTION_MERCHANT_URL }}
+          envkey_REACT_APP_DOCS_URL: ${{ vars.REACT_APP_PRODUCTION_DOCS_URL }}
           file_name: .env
 
       - uses: FirebaseExtended/action-hosting-deploy@v0

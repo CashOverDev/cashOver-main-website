@@ -1,13 +1,14 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 
-import { Helmet } from 'react-helmet'
+import { Helmet } from "react-helmet";
 
-import ContactFormDark from '../components/contact-form-dark'
-import Footer from '../components/footer'
-import './cash-over-sdk.css'
+import ContactFormDark from "../components/contact-form-dark";
+import Footer from "../components/footer";
+import "./cash-over-sdk.css";
 
 const CashOverSDK = (props) => {
+  const docsUrl = process.env.REACT_APP_DOCS_URL;
   return (
     <div className="cash-over-sdk-container">
       <Helmet>
@@ -35,12 +36,16 @@ const CashOverSDK = (props) => {
           className="cash-over-sdk-navbar-interactive"
         >
           <Link to="/" className="cash-over-sdk-navlink">
-            <img className="cash-over-sdk-image1" alt="CashOver Logo" src="/cashover%20banner%20dark.png" />
+            <img
+              className="cash-over-sdk-image1"
+              alt="CashOver Logo"
+              src="/cashover%20banner%20dark.png"
+            />
           </Link>
           <div data-thq="thq-navbar-nav" className="cash-over-sdk-desktop-menu">
             <nav className="cash-over-sdk-links">
               <a
-                href={`https://docs.${window.location.host}/web`}
+                href={`${docsUrl}/web`}
                 target="_blank"
                 rel="noreferrer noopener"
                 className="cash-over-sdk-link1 thq-link thq-body-small"
@@ -48,7 +53,7 @@ const CashOverSDK = (props) => {
                 Web SDK
               </a>
               <a
-                href={`https://docs.${window.location.host}/ios`}
+                href={`${docsUrl}/ios`}
                 target="_blank"
                 rel="noreferrer noopener"
                 className="cash-over-sdk-link2 thq-link thq-body-small"
@@ -56,7 +61,7 @@ const CashOverSDK = (props) => {
                 iOS SDK
               </a>
               <a
-                href={`https://docs.${window.location.host}/android`}
+                href={`${docsUrl}/android`}
                 target="_blank"
                 rel="noreferrer noopener"
                 className="cash-over-sdk-link3 thq-link thq-body-small"
@@ -64,7 +69,7 @@ const CashOverSDK = (props) => {
                 Android SDK
               </a>
               <a
-                href={`https://${window.location.host}/cash-over-fees/#SDK`}
+                href={`${window.location.protocol}//${window.location.host}/cash-over-fees/#SDK`}
                 className="cash-over-sdk-link4 thq-link thq-body-small"
               >
                 Pricing
@@ -77,8 +82,12 @@ const CashOverSDK = (props) => {
               </Link>
             </nav>
             <div className="cash-over-sdk-buttons">
-            <Link to="/Signup" className="thq-button-filled-dark">Create Account</Link>
-                <Link to="/Signup" className="thq-button-outline-dark">Login</Link>
+              <Link to="/Signup" className="thq-button-filled-dark">
+                Create Account
+              </Link>
+              <Link to="/Signup" className="thq-button-outline-dark">
+                Login
+              </Link>
             </div>
           </div>
           <div data-thq="thq-burger-menu" className="cash-over-sdk-burger-menu">
@@ -116,7 +125,7 @@ const CashOverSDK = (props) => {
               </div>
               <nav className="navigation-bar-dark-links1">
                 <a
-                  href={`https://docs.${window.location.host}/web`}
+                  href={`${docsUrl}/web`}
                   target="_blank"
                   rel="noreferrer noopener"
                   className="navigation-bar-dark-link11 thq-link thq-body-small"
@@ -157,8 +166,12 @@ const CashOverSDK = (props) => {
                 </Link>
               </nav>
               <div className="navigation-bar-dark-buttons1">
-                <Link to="/Signup" className="thq-button-filled-dark">Create Account</Link>
-                <Link to="/Signup" className="thq-button-outline-dark">Login</Link>
+                <Link to="/Signup" className="thq-button-filled-dark">
+                  Create Account
+                </Link>
+                <Link to="/Signup" className="thq-button-outline-dark">
+                  Login
+                </Link>
               </div>
             </div>
             <div className="navigation-bar-dark-icon-group">
@@ -239,7 +252,7 @@ const CashOverSDK = (props) => {
           </div>
           <div className="cash-over-sdk-container1">
             <a
-               href={`https://docs.${window.location.host}`}
+              href={`${docsUrl}`}
               target="_blank"
               rel="noreferrer noopener"
               className="cash-over-sdk-action12 thq-button-filled-dark"
@@ -272,7 +285,7 @@ const CashOverSDK = (props) => {
             CASHOVER PAY IS WHAT YOUR BUSINESS
             <span
               dangerouslySetInnerHTML={{
-                __html: ' ',
+                __html: " ",
               }}
             />
           </span>
@@ -338,7 +351,7 @@ const CashOverSDK = (props) => {
       <ContactFormDark rootClassName="contact-form-dark-root-class-name7"></ContactFormDark>
       <Footer rootClassName="footer-root-class-name9"></Footer>
     </div>
-  )
-}
+  );
+};
 
-export default CashOverSDK
+export default CashOverSDK;

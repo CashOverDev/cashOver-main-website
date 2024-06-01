@@ -10,6 +10,7 @@ import Footer from "../components/footer";
 import "./merchant.css";
 
 const Merchant = (props) => {
+  const docsUrl = process.env.REACT_APP_DOCS_URL;
   return (
     <div className="merchant-container">
       <Helmet>
@@ -312,7 +313,7 @@ const Merchant = (props) => {
               <br></br>
             </span>
             <a
-              href={`https://docs.${window.location.host}`}
+              href={`${docsUrl}`}
               target="_blank"
               rel="noreferrer noopener"
               className="merchant-action13 thq-button-filled-dark"
